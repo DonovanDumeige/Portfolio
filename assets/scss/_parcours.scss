@@ -1,0 +1,130 @@
+@use "variables"as v;
+#exp{
+    height: 50px;
+}
+.section-parcours {
+    min-height: 100vh;
+    margin-bottom: 3rem;
+}
+
+.parcours-container {
+    max-width: 80vw;
+    margin: 0 auto;
+    grid-gap: 0 30px;
+    padding: 20px;
+    height: 95%;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: v.$mainColor;
+        top: 3%;
+        bottom: 0;
+        left: 18%;
+    }
+}
+
+.separateur {
+    width: 2px;
+    max-height: 100%;
+    background-color: v.$mainColor;
+    grid-area: separateur;
+    position: absolute;
+}
+
+/* ************** MAIN ********** */
+
+
+.exp-container {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas: "date xp";
+    grid-gap: 0 150px;
+    align-items: center;
+
+}
+
+.exp-container:not(:last-of-type) {
+    margin-bottom: 2.5rem;
+}
+
+.exp-details {
+    border-radius: 25px;
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+    background-color: v.$bgColorObject;
+    box-shadow: 2px 2px 3px rgba(118, 139, 152, 0.3);
+    position: relative;
+
+    &::before {
+        content: " ";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-top: 20px solid transparent;
+        border-right: 20px solid v.$bgColorObject;
+        border-bottom: 20px solid transparent;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+    }
+
+    h4,
+    h3,
+    p {
+        margin: 15px 0;
+    }
+
+    h3 {
+        color: v.$mainColor;
+        font-family: v.$bold;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+    }
+    h4{
+        font-family: v.$light;
+        font-size :1.25rem;
+        color: v.$secondColor;
+    }
+    span {
+        font-weight: bold;
+    }
+    p:last-child{
+        margin-bottom: 20px;
+    }
+    li {
+        padding: 5px 0;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+
+/* ************* SIDE *********** */
+
+.exp-date {
+    /* Son parent grid */
+    grid-area: date;
+    width: 120px;
+    height: 120px;
+    background-color: v.$mainColor;
+    color: white;
+    font-family: monospace;
+    border-radius: 50%;
+
+    /** Propriété conteneur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    span {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
