@@ -33,7 +33,7 @@ a {
 }
 
 section {
-  margin: 4rem 0;
+  margin: 4rem 0 6rem;
 }
 
 h2 {
@@ -70,6 +70,7 @@ header {
 /* ******* NAVBAR ******* */
 .navbar {
   position: fixed;
+  z-index: 1;
   top: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -122,7 +123,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80%;
+  gap: 30%;
 }
 .header-center .main-skills .skill {
   display: flex;
@@ -143,10 +144,6 @@ header {
 
 /* ******* FIN HEADER-CENTER ******* */
 /* ******* ABOUT ME ******* */
-#about {
-  height: 20px;
-}
-
 .main-section {
   width: 85vw;
   min-width: 100vh;
@@ -158,12 +155,11 @@ header {
   grid-template-areas: "h2 h2" "side main" "cta cta";
   align-items: center;
 }
-
-section {
+.main-section section {
   margin: 3rem 0 2.5rem;
   grid-area: h2;
 }
-section h2 {
+.main-section section h2 {
   margin: 0;
 }
 
@@ -423,7 +419,6 @@ section h2 {
 .parcours-container {
   max-width: 80vw;
   margin: 0 auto;
-  grid-gap: 0 30px;
   padding: 20px;
   height: 95%;
   position: relative;
@@ -456,7 +451,7 @@ section h2 {
 }
 
 .exp-container:not(:last-of-type) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .exp-details {
@@ -495,13 +490,19 @@ section h2 {
   color: #768B98;
 }
 .exp-details span {
+  font-family: Barlow-medium;
   font-weight: bold;
+}
+.exp-details p {
+  line-height: 1.5;
 }
 .exp-details p:last-child {
   margin-bottom: 20px;
 }
 .exp-details li {
   padding: 5px 0;
+  margin-left: 35px;
+  margin-bottom: 5px;
 }
 .exp-details li:last-of-type {
   margin-bottom: 0;
@@ -520,7 +521,6 @@ section h2 {
   /** Propriété conteneur */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -528,6 +528,126 @@ section h2 {
   display: inline-block;
   font-size: 1rem;
   font-weight: 700;
+}
+
+#folio {
+  height: 50px;
+}
+
+.section-folio {
+  min-height: 100vh;
+}
+
+.folio-container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  /* Permet de créer automatiquement des colonnes en fonction du contenu */
+  grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+  grid-template-rows: repeat(2, 500px);
+  grid-gap: 4rem;
+}
+
+/* classe qui ne gère que l'aspect extérieur d'un item d'une grid */
+.realisation {
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px rgba(118, 139, 152, 0.3);
+  position: relative;
+}
+
+/* style d'un conteneur d'image/video */
+.photo-folio {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 85%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.photo-folio:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  background-color: black;
+  opacity: 0.25;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.folio-overlay {
+  height: 15%;
+  text-align: center;
+  background-color: rgb(196, 202, 205);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  transition: height 0.6s ease-out;
+}
+.folio-overlay:hover {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.overlay-text {
+  height: 100%;
+}
+.overlay-text h4 {
+  padding: 30px 0;
+}
+
+.inner-title {
+  text-align: center;
+  font-family: Barlow-medium;
+  margin-bottom: 1rem;
+}
+
+p {
+  padding: 0 40px;
+  text-align: justify;
+  overflow: auto;
+  line-height: 2;
+}
+p span {
+  font-weight: bold;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.tags li {
+  padding: 10px;
+  list-style-type: none;
+  background-color: #768B98;
+  color: white;
+  font-family: monospace;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+#cbr {
+  background-image: url(../folio/CBR-cover.png);
+}
+
+#happy-floor {
+  background-image: url(../folio/HF-cover.png);
+}
+
+.happy, .floor {
+  display: inline-block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.floor {
+  font-weight: 200;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=cv.css.map */

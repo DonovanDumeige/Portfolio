@@ -10,7 +10,6 @@
 .parcours-container {
     max-width: 80vw;
     margin: 0 auto;
-    grid-gap: 0 30px;
     padding: 20px;
     height: 95%;
     position: relative;
@@ -47,7 +46,7 @@
 }
 
 .exp-container:not(:last-of-type) {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .exp-details {
@@ -88,13 +87,19 @@
         color: v.$secondColor;
     }
     span {
+        font-family: v.$medium;
         font-weight: bold;
     }
-    p:last-child{
-        margin-bottom: 20px;
+    p{
+        line-height: 1.5;
+        &:last-child{
+            margin-bottom: 20px;
+        }
     }
     li {
         padding: 5px 0;
+        margin-left: 35px;
+        margin-bottom: 5px;
         &:last-of-type{
             margin-bottom: 0;
         }
@@ -118,7 +123,6 @@
     /** Propriété conteneur */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     text-align: center;
 
