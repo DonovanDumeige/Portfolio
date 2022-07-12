@@ -132,3 +132,29 @@
         font-weight: 700;
     }
 }
+
+.before{
+    position : absolute;
+    top : 50%;
+    left:0;
+}
+
+.after{
+    position : absolute;
+    top : 50%;
+    right : 0;
+}
+
+.before, .after{
+    color: grey;
+    width : 70px;
+    height : 70px;
+    z-index: 1;
+    text-align: center;
+    font-size:2.5rem;
+    line-height: 70px;
+}
+
+.before:hover, .after:hover{
+    color:brown;
+}
