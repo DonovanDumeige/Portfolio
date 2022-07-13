@@ -1,0 +1,110 @@
+@use "variables" as v;
+#contact{
+    height: 50px;
+}
+
+.section-contact{
+    min-height: 50vh;
+    margin-bottom: 2rem;
+}
+
+.contact-container{
+    max-width: 80vw;
+    margin: 0 auto;
+    height:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    column-gap:2rem;
+    row-gap: 1rem;
+}
+
+.contact-infos{
+    grid-column: 1/4;
+    grid-row : 1/2;
+    text-align: center;
+    line-height: 50px;
+    font-family: v.$medium;
+    p{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+}
+.contact{
+    border-radius: 15px;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding :50px 0;
+    gap: 25px;
+    i{
+        font-size:3rem;
+    }
+    p{
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+#mail{
+    grid-row : 2/3;
+    grid-column: 1/2;
+    background-color: #d7361224;
+    a,p{
+        color : v.$mainColor;
+    }
+    a{
+        &:hover{
+            color: #9f1e00;
+        }
+    }
+}
+
+#lkd{
+    grid-row : 2/3;
+    grid-column: 2/3;
+    color : v.$lavande;
+    background-color: #8aaad225;
+    a{
+        color : v.$lavande;
+        &:hover{
+            color:#49678c;
+        }
+    }
+
+}
+
+#irl{
+    grid-row : 2/3;
+    grid-column:3/4 ;
+    background-color: #eda4111e;
+    span{
+        font-size: 1.8rem;
+        color: v.$jaune;
+        font-family: v.$bold;
+    }
+    p{
+        .span{
+            font-family: v.$medium;
+            color : rgb(65, 64, 64);
+            font-size : 1.25rem;
+        }
+    }
+}
+
+footer{
+    height: 100px;
+    background-color: v.$secondColor;
+    p{
+        text-align: center;
+        line-height: 100px;
+        font-family: v.$bold;
+        color:white;
+        font-size:1.25rem;
+    }
+}

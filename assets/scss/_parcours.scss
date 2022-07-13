@@ -3,7 +3,7 @@
     height: 50px;
 }
 .section-parcours {
-    min-height: 100vh;
+    min-height: 10vh;
     margin-bottom: 3rem;
 }
 
@@ -21,7 +21,7 @@
         background-color: v.$mainColor;
         top: 3%;
         bottom: 0;
-        left: 18%;
+        left: 13%;
     }
 }
 
@@ -135,14 +135,14 @@
 
 .before{
     position : absolute;
-    top : 50%;
-    left:0;
+    top : 40%;
+    left:-5%;
 }
 
 .after{
     position : absolute;
-    top : 50%;
-    right : 0;
+    top : 40%;
+    right : -5%;
 }
 
 .before, .after{

@@ -19,7 +19,7 @@
 }
 
 /* classe qui ne gère que l'aspect extérieur d'un item d'une grid */
-.realisation{
+.realisation, .carousel-container{
     border-radius: 20px;
     box-shadow: 2px 2px 3px rgba(118, 139, 152, 0.3);
     position: relative;
@@ -115,4 +115,39 @@
 .floor{
 font-weight: 200;
 letter-spacing: 3px;
+}
+
+.before, .after{
+    color: grey;
+    width : 70px;
+    height : 70px;
+    z-index: 1;
+    text-align: center;
+    font-size:2.5rem;
+    line-height: 70px;
+}
+
+.before:hover, .after:hover{
+    color:brown;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }

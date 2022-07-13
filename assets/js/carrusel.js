@@ -8,22 +8,14 @@ const before=document.querySelector('.before'),
 
 // Pour cacher les images sauf la première
 function hide() {
-    showBtns(slides)
     for (let i = 1; i < slides.length; i++) {
         let slide = slides[i];
+        console.log(slide);
         slide.style.display = "none";
     }
 }
 hide();
 
-// Générer des boutons automatiquement selon le nombre d'images
-function showBtns() {
-    for(let i = 0; i<slides.length;i++){
-        let btn = document.createElement('button')
-        btn.classList.add("button")
-        document.querySelector('.buttons').appendChild(btn)
-    }
-}
 
 function letSlide(i){
     // console.log();
@@ -36,7 +28,7 @@ function letSlide(i){
         slideIndex = slideIndex===0 ? slides.length-1: slideIndex-1;
     }
     slides[lastIndex].style.display = "none";
-    slides[slideIndex].style.display = "block";
+    slides[slideIndex].style.display = "grid";
 }
 
 before.addEventListener("click",letSlide)
