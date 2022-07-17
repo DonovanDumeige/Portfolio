@@ -1,6 +1,6 @@
 @use "variables"as v;
 #exp{
-    height: 50px;
+    height: 30px;
 }
 .section-parcours {
     min-height: 10vh;
@@ -8,7 +8,7 @@
 }
 
 .parcours-container {
-    max-width: 80vw;
+    width: 85vw;
     margin: 0 auto;
     padding: 20px;
     height: 95%;
@@ -21,7 +21,7 @@
         background-color: v.$mainColor;
         top: 3%;
         bottom: 0;
-        left: 13%;
+        left: 200px
     }
 }
 
@@ -36,7 +36,7 @@
 /* ************** MAIN ********** */
 
 
-.exp-container {
+.exp-box {
     display: grid;
     grid-template-columns: 120px 1fr;
     grid-template-areas: "date xp";
@@ -45,7 +45,7 @@
 
 }
 
-.exp-container:not(:last-of-type) {
+.exp-box:not(:last-of-type) {
     margin-bottom: 3rem;
 }
 
@@ -126,7 +126,7 @@
     justify-content: center;
     text-align: center;
 
-    span {
+    p {
         display: inline-block;
         font-size: 1rem;
         font-weight: 700;

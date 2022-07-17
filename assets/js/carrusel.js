@@ -1,6 +1,6 @@
 "use strict"
 
-let slides = document.querySelectorAll('.exp-container'),
+let slides = document.querySelectorAll('.exp-box'),
     slideIndex = 0,
     lastIndex = 0;  
 const before=document.querySelector('.before'),

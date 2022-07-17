@@ -3,11 +3,9 @@
 /* ******* ABOUT ME ******* */
 #about{
     height:20px;
-    background-color:lightcoral;
 }
 .main-section {
-    background-color: rgba(173, 216, 230, 0.254);
-    width: 85%;
+    width: 85vw;
     margin: 2rem auto 3rem auto;
     display: grid;
     grid-gap : 0 100px;;
@@ -16,7 +14,6 @@
     grid-template-areas: "h2 h2" "side main""cta cta";
     align-items: center;
     section {
-        margin: 3rem 0 2.5rem;
         grid-area : h2;
         h2{
             margin:0
@@ -89,7 +86,7 @@
 
 
     button {
-        @include v.size(15vw, 7vh);
+        width : 15vw;
         border-radius: 30px;
         color: white;
         outline: 1px solid transparent;

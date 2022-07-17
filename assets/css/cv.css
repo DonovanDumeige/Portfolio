@@ -22,15 +22,15 @@
 }
 
 body {
+  width: 100vw;
   background-color: rgba(27, 47, 51, 0.2);
   font-family: Barlow;
   font-size: 1.05rem;
 }
 
-body * {
-  border: 1px solid black;
-}
-
+/* body *{
+    border: 1px solid black;
+} */
 a {
   text-decoration: none;
 }
@@ -62,7 +62,8 @@ h2 span {
 
 header {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  margin-bottom: 0.5rem;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/bg-grey.jpg");
   background-position: top;
   background-size: cover;
@@ -73,8 +74,23 @@ header {
 /* ******* NAVBAR ******* */
 #menu {
   display: none;
+  text-align: right;
+  color: #D73512;
+  font-size: 2rem;
+  position: fixed;
+  z-index: 1;
+  top: 2%;
+  right: 2%;
 }
 
+/* ONLY FOR JS */
+.navbar-js {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* END ONLY FOR JS */
 .navbar {
   position: fixed;
   z-index: 1;
@@ -119,6 +135,8 @@ header {
   gap: 15%;
 }
 .header-center .intro {
+  text-align: center;
+  padding: 0 2rem;
   font-family: Barlow;
   color: white;
   font-size: 4rem;
@@ -131,9 +149,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30%;
+  width: 100%;
+  gap: 10%;
 }
 .header-center .main-skills .skill {
+  width: 10%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -154,12 +174,10 @@ header {
 /* ******* ABOUT ME ******* */
 #about {
   height: 20px;
-  background-color: lightcoral;
 }
 
 .main-section {
-  background-color: rgba(173, 216, 230, 0.254);
-  width: 85%;
+  width: 85vw;
   margin: 2rem auto 3rem auto;
   display: grid;
   grid-gap: 0 100px;
@@ -169,7 +187,6 @@ header {
   align-items: center;
 }
 .main-section section {
-  margin: 3rem 0 2.5rem;
   grid-area: h2;
 }
 .main-section section h2 {
@@ -233,7 +250,6 @@ header {
 }
 .cta button {
   width: 15vw;
-  height: 7vh;
   border-radius: 30px;
   color: white;
   outline: 1px solid transparent;
@@ -266,28 +282,24 @@ header {
 
 /* ******* FIN ABOUT ME ******* */
 #skills {
-  height: 50px;
-  background-color: lightcoral;
+  height: 20px;
 }
 
 /* ******* SKILLS ******* */
 .skills-section {
   min-height: 100vh;
-  margin-bottom: 3rem;
-  background-color: rgba(173, 216, 230, 0.254);
 }
 .skills-section h2 {
   text-align: center;
 }
 
 .skills-library {
-  max-width: 85vw;
+  width: 85vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 310px 1fr;
   grid-template-areas: "f f f f" "b b b b" "w w w w" "o o o o";
-  grid-gap: 20px;
 }
 
 #frontEnd {
@@ -348,13 +360,13 @@ header {
 
 .skill-item {
   display: grid;
-  grid-template-columns: 60% 1fr;
+  grid-template-columns: 1fr 250px;
   grid-template-areas: "c i";
   align-content: center;
   grid-gap: 0 100px;
 }
 .skill-item:nth-child(even) {
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 250px 1fr;
   grid-template-areas: "i c";
 }
 .skill-item:nth-child(even) .skill-image {
@@ -423,7 +435,7 @@ header {
 }
 
 #exp {
-  height: 50px;
+  height: 30px;
 }
 
 .section-parcours {
@@ -432,7 +444,7 @@ header {
 }
 
 .parcours-container {
-  max-width: 80vw;
+  width: 85vw;
   margin: 0 auto;
   padding: 20px;
   height: 95%;
@@ -445,7 +457,7 @@ header {
   background-color: #D73512;
   top: 3%;
   bottom: 0;
-  left: 13%;
+  left: 200px;
 }
 
 .separateur {
@@ -457,7 +469,7 @@ header {
 }
 
 /* ************** MAIN ********** */
-.exp-container {
+.exp-box {
   display: grid;
   grid-template-columns: 120px 1fr;
   grid-template-areas: "date xp";
@@ -465,7 +477,7 @@ header {
   align-items: center;
 }
 
-.exp-container:not(:last-of-type) {
+.exp-box:not(:last-of-type) {
   margin-bottom: 3rem;
 }
 
@@ -539,7 +551,7 @@ header {
   justify-content: center;
   text-align: center;
 }
-.exp-date span {
+.exp-date p {
   display: inline-block;
   font-size: 1rem;
   font-weight: 700;
@@ -580,7 +592,7 @@ header {
 }
 
 .folio-container {
-  max-width: 80vw;
+  width: 85vw;
   margin: 0 auto;
   display: grid;
   /* Permet de créer automatiquement des colonnes en fonction du contenu */
@@ -640,19 +652,22 @@ header {
   padding: 30px 0;
 }
 
+.inner-title, .folio-inner {
+  padding: 0 40px;
+}
+
 .inner-title {
   text-align: center;
   font-family: Barlow-medium;
   margin-bottom: 1rem;
 }
 
-p {
-  padding: 0 40px;
+.folio-inner {
   text-align: justify;
   overflow: auto;
   line-height: 2;
 }
-p span {
+.folio-inner span {
   font-weight: bold;
 }
 
@@ -729,12 +744,15 @@ p span {
 }
 
 .section-contact {
-  min-height: 50vh;
+  min-height: 40vh;
   margin-bottom: 2rem;
+}
+.section-contact section {
+  margin: 4rem 0;
 }
 
 .contact-container {
-  max-width: 80vw;
+  width: 85vw;
   margin: 0 auto;
   height: 90%;
   display: grid;
@@ -753,7 +771,7 @@ p span {
 }
 .contact-infos p {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .contact {
@@ -829,6 +847,284 @@ footer p {
   font-family: Barlow-bold;
   color: white;
   font-size: 1.25rem;
+}
+
+/* *** TABLETTE */
+@media screen and (max-width: 900px) {
+  div[class$=container] {
+    width: 90vw;
+  }
+  section {
+    margin: 3rem 0 4rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h2 span {
+    font-size: 5rem;
+  }
+  /* *** HEADER*** */
+  header {
+    height: 60vh;
+  }
+  #menu {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  .header-center {
+    width: 95%;
+    margin: 5px auto 0;
+  }
+  .header-center .intro {
+    font-size: 2rem;
+  }
+  .header-center .intro span {
+    font-size: 3.5rem;
+  }
+  .header-center .main-skills {
+    gap: 15%;
+  }
+  .header-center .main-skills .skill {
+    width: 15%;
+  }
+  /* *** FIN HEADER *** */
+  /* *** SECTION A PROPOS *** */
+  .main-section {
+    width: 90vw;
+    grid-gap: 0 10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100px 1fr 110px;
+  }
+  /* ** MAIN ** */
+  .main p {
+    font-size: 1rem;
+  }
+  /* ** SIDE ** */
+  .side .side-photo img {
+    width: 80%;
+    transform: translateX(25px);
+  }
+  .side .side-infos p {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
+  /* ** CTA ** */
+  .cta button {
+    width: 21vw;
+  }
+  .cta button a {
+    font-size: 1.05rem;
+  }
+  /* *** FIN SECTION A PROPOS */
+  /* *** SECTION COMPETENCES *** */
+  .skill-item {
+    grid-gap: 0 30px;
+    grid-template-columns: 1fr 120px;
+  }
+  .skill-item:nth-child(even) {
+    grid-template-columns: 120px 1fr;
+  }
+  .skill-image i {
+    font-size: 6rem;
+  }
+  /* ***FIN SECTION COMPETENCES *** */
+  /* *** SECTION PARCOURS *** */
+  .parcours-container::after {
+    left: 165px;
+  }
+  .exp-box {
+    grid-gap: 0 75px;
+  }
+  /* *** FIN SECTION PARCOURS *** */
+  /* *** SECTION FOLIO *** */
+  .folio-container {
+    width: 90vw;
+    grid-template-columns: 650px;
+    grid-template-rows: 500px 500px 500px 500px;
+    justify-content: center;
+  }
+  /* *** FIN SECTION FOLIO *** */
+  /* *** SECTION CONTACT */
+  .contact-container {
+    width: 90vw;
+    grid-template-rows: 130px 180px;
+  }
+  .contact-infos p {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+  .contact i {
+    font-size: 2.5rem;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+  #irl span {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+  #irl p .span {
+    font-family: Barlow-medium;
+    color: rgb(54, 52, 52);
+    font-size: 1rem;
+  }
+  footer {
+    height: 75px;
+  }
+  footer p {
+    line-height: 75px;
+  }
+  /* *** FIN SECTION CONTACT */
+}
+/* ***************** MOBILE ************** */
+@media screen and (max-width: 700px) {
+  div[class$=container] {
+    width: 95vw;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h2 span {
+    font-size: 3.5rem;
+    top: -25px;
+  }
+  /* *** HEADER *** */
+  header {
+    height: 50vh;
+  }
+  #menu {
+    right: 3%;
+    font-size: 2.2rem;
+  }
+  .header-center {
+    gap: 10%;
+  }
+  .header-center .intro {
+    font-size: 2rem;
+  }
+  .header-center .intro span {
+    font-size: 2.5rem;
+  }
+  .header-center .main-skills .skill i {
+    font-size: 4rem;
+  }
+  /* *** FIN HEADER *** */
+  /* *** SECTION ABOUT *** */
+  .main-section {
+    width: 95vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 1fr 110px;
+    row-gap: 5px;
+    grid-template-areas: "h2 h2" "side side" " main main" "cta cta";
+  }
+  .side {
+    flex-direction: row;
+  }
+  .side .side-photo {
+    width: 50%;
+  }
+  .side .side-photo img {
+    width: 70%;
+  }
+  .side .side-infos {
+    width: 50%;
+  }
+  .main p {
+    padding: 0 35px;
+  }
+  .main p span {
+    display: block;
+    text-align: center;
+  }
+  .cta button {
+    width: 30vw;
+  }
+  .cta button a {
+    font-size: 0.95rem;
+  }
+  /* *** FIN SECTION ABOUT *** */
+  /* *** SECTION SKILLS *** */
+  .skills-library {
+    grid-template-rows: 350px 350px 280px 485px;
+  }
+  .skill-item {
+    grid-template-columns: 1fr;
+    grid-template-areas: "c";
+  }
+  .skill-item:nth-child(even) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "c";
+  }
+  .skill-image {
+    display: none;
+  }
+  /* *** FIN SECTION SKILLS  */
+  /* *** SECTION PARCOURS */
+  .section-parcours .parcours-container {
+    width: 90vw;
+  }
+  .section-parcours .parcours-container::after {
+    display: none;
+  }
+  .exp-box {
+    grid-template-columns: 1fr;
+    grid-template-areas: "xp";
+  }
+  .exp-details::before {
+    display: none;
+  }
+  .exp-date {
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    height: 70px;
+    border-radius: 0;
+    position: absolute;
+    top: -35px;
+    background-color: transparent;
+  }
+  .exp-date p {
+    font-size: 1.5rem;
+    color: #D73512;
+  }
+  /* *** FIN SECTION PARCOURS */
+  /* *** SECTION FOLIO *** */
+  .folio-container {
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(4, 450px);
+  }
+  /* *** FIN SECTION FOLIO *** */
+  /* *** SECTION CONTACT *** */
+  .contact-container {
+    grid-template-rows: 120px 180px;
+  }
+  .contact-infos p {
+    font-size: 1.1rem;
+  }
+  .contact i {
+    font-size: 2rem;
+  }
+  .contact p {
+    font-size: 0.75rem;
+  }
+  #irl span {
+    font-size: 1.1rem;
+  }
+  #irl p .span {
+    font-size: 0.8rem;
+    font-family: Barlow-bold;
+  }
+  footer {
+    height: 60px;
+  }
+  footer p {
+    line-height: 60px;
+    font-size: 0.9rem;
+  }
+  /* *** FIN SECTION CONTACT */
 }
 
 /*# sourceMappingURL=cv.css.map */

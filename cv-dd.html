@@ -11,6 +11,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./assets/js/carrusel.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -18,9 +19,9 @@
     <header>
         <div class="start" id="start"></div>
         <!-- Menu -->
+        <i class="fa-solid fa-bars" id="menu"></i>
         <nav class="navbar">
             <ul>
-                <li id="menu"><i class="fa-solid fa-bars"></i></li>
                 <li>
                     <a href="#start"><i class="fa-solid fa-house"></i></a>
                 </li>
@@ -35,7 +36,7 @@
         <!-- header-center -->
         <div class="header-center">
             <p class="intro">
-                Bonjour je m'appelle Donovan et je suis <br>
+                Bonjour je m'appelle Donovan et je suis
                 <span>développeur web junior</span> <span class="blinkbar"></span>
             </p>
             <div class="main-skills">
@@ -396,15 +397,15 @@
         <section>
             <h2><span>Expériences</span>Parcours professionnel</h2>
         </section>
-<!-- Mon script carrusel démarre sur cette section -->
+        <!-- Mon script carrusel démarre sur cette section -->
         <div class="parcours-container">
             <div class="before"><i class="fa-solid fa-chevron-left"></i></div>
             <div class="after"><i class="fa-solid fa-angle-right"></i></div>
             <!-- Expérience 1 -->
-            <article class="exp-container">
+            <article class="exp-box">
                 <!-- Side content -->
                 <div class="exp-date">
-                    <span> mai 2022 <br>-<br>fév 2023 </span>
+                    <p> mai 2022</p><p>-</p> <p>fév 2023 </p>
                 </div>
                 <!-- Main content-->
                 <div class="exp-details">
@@ -423,10 +424,10 @@
             </article>
 
             <!-- Expérience 2 -->
-            <article class="exp-container">
+            <article class="exp-box">
                 <!-- Side content -->
                 <div class="exp-date">
-                    <span> août 2019 <br> - <br> mai 2020</span>
+                    <p> août 2019</p><p>-</p><p>mai 2020</p>
                 </div>
                 <!-- Main content-->
                 <div class="exp-details">
@@ -435,30 +436,12 @@
 
                     <!-- pôle d'action -->
                     <p>
-                        <span>Print : gérer la production de 3 marques (LMC, Optima, Natural Wood)</span>
-                        <li>Brief et définition du projet avec les chefs de produits</li>
-                        <li>Plannification du projet : rétroplanning, suivi, négoce avec les prestataires.</li>
-                        <li>Contrôle qualité et distribution</li>
-                        <li>Conception-rédaction du catalogue HAPPY FLOOR de Natural Wood</li>
-                        </ul>
-                    </p>
-                    <!-- fin pôle d'action -->
-
-                    <!-- pôle d'action -->
-                    <p>
-                        <span>Interne : accompagner la communication auprès des salariés</span>
-                        <li>Affiches</li>
-                        <li>Interviews et reportages vidéos</li>
-                        <li>Conception-rédaction d'une brochure sécurité liée à la COVID-19</li>
-                        </ul>
-                    </p>
-                    <!-- fin pôle d'action -->
-
-                    <!-- pôle d'action -->
-                    <p>
-                        <span>Audiovisuel : vidéos produits pour le site internet et les réseaux sociaux</span>
-                        <li>Création de vidéos animées à partir d'images fixes</li>
-                        <li>Animation logo et création d'effets</li>
+                        <ul>
+                            <li>Print : gérer la production de 3 marques (LMC, Optima, Natural Wood)</li>
+                            <li>Interne : accompagner la communication auprès des salariés (affiches, interviews,
+                                reportages vidéos, brochures...)</li>
+                            <li>Audiovisuel : vidéos produits pour le site internet et les réseaux sociaux</li>
+                            <li>Conception-rédaction du catalogue HAPPY FLOOR de Natural Wood</li>
                         </ul>
                     </p>
                     <!-- fin pôle d'action -->
@@ -466,10 +449,10 @@
             </article>
 
             <!-- Expérience 3 -->
-            <article class="exp-container">
+            <article class="exp-box">
                 <!-- Side content -->
                 <div class="exp-date">
-                    <span> sept. 2018 <br> - <br>avr. 2019</span>
+                    <p>sept. 2018</p> <p>-</p> <p>avr. 2019</p>
                 </div>
                 <!-- Main content-->
                 <div class="exp-details">
@@ -478,12 +461,13 @@
 
                     <!-- pôle d'action -->
                     <p>
-                        <span>Moderniser le catalogue</span>
-                        <li>Conception du catalogue général : définition du style (couleurs, polices)
-                            en collaboration avec une agence de communication</li>
-                        <li>Mise en page des textes et photos : rédaction,
-                            prise d'informations auprès des fournisseurs</li>
-                        <li>Photos produits : prise de vue, retouche et détourage, dessin vectoriel </li>
+                        <ul>
+                            <span>Moderniser le catalogue</span>
+                            <li>Conception du catalogue général : définition du style (couleurs, polices)
+                                en collaboration avec une agence de communication</li>
+                            <li>Mise en page des textes et photos : rédaction,
+                                prise d'informations auprès des fournisseurs</li>
+                            <li>Photos produits : prise de vue, retouche et détourage, dessin vectoriel </li>
                         </ul>
                     </p>
                     <!-- fin pôle d'action -->
@@ -491,10 +475,10 @@
             </article>
 
             <!-- Expérience 4 -->
-            <article class="exp-container">
+            <article class="exp-box">
                 <!-- Side content -->
                 <div class="exp-date">
-                    <span> sept. 2017 </span>
+                    <p> sept. 2017 </p>
                 </div>
                 <!-- Main content-->
                 <div class="exp-details">
@@ -509,10 +493,10 @@
                 </div>
             </article>
             <!-- Expérience 5 -->
-            <article class="exp-container">
+            <article class="exp-box">
                 <!-- Side content -->
                 <div class="exp-date">
-                    <span> sept. 2019 <br> - <br> déc. 2017</span>
+                    <p> sept. 2019</p> <p>-</p> <p>déc. 2017</p>
                 </div>
                 <!-- Main content-->
                 <div class="exp-details">
@@ -521,32 +505,12 @@
 
                     <!-- pôle d'action -->
                     <p>
-                        <span>Rédaction : brèves, articles, dossiers,reportages multi-supports (papier, intranet,
-                            application mobile)</span>
-                        <li>Travail de terrain pour la prise d'informations. </li>
-                        <li>Synthèse et vulgarisation des informations.</li>
-                        <li>Prise de photos d'illustrations.</li>
-                        </ul>
-                    </p>
-                    <!-- fin pôle d'action -->
-
-                    <!-- pôle d'action -->
-                    <p>
-                        <span>Etude conseil : améliorer le processus de création du journal interne</span>
-                        <li>Définition du projet : problématiques, hypothèses de départ.</li>
-                        <li>Benchmark auprès d'autres usines du groupe Renault : récolte de données
-                            sur les bonnes pratiques, les outils et les process.</li>
-                        <li>Mise en place d'un réseau de correspondants en communication : définition des enjeux,
-                            animation quotidienne (individuelle) et mensuelle (collective)</li>
-                        </ul>
-                    </p>
-                    <!-- fin pôle d'action -->
-
-                    <!-- pôle d'action -->
-                    <p>
-                        <span>Evènementiel : cérémonie annuelle interne - le prix de l'Excellence</span>
-                        <li>Définition du projet : objectifs, listes des taches et rétroplanning </li>
-                        <li>Animation logo et création d'effets</li>
+                        <ul>
+                            <span>Suivi de la vie interne et des évènements de l'usine</span>
+                            <li>Rédaction : brèves, articles, dossiers,reportages multi-supports (papier, intranet,
+                                application mobile) </li>
+                            <li>Etude conseil : améliorer le processus de création du journal interne</li>
+                            <li>Evènementiel : cérémonie annuelle interne - le prix de l'Excellence</li>
                         </ul>
                     </p>
                     <!-- fin pôle d'action -->
@@ -583,7 +547,7 @@
                             un outil de travail en interne, qu'un outil
                             d'aide à la vente pour les clients.
                         </p>
-                        <p> Une refonte complète du style a été effectué. Avec l'aide d'une agence de communication,
+                        <p class = "folio-inner"> Une refonte complète du style a été effectué. Avec l'aide d'une agence de communication,
                             j'ai proposé un gabarit plus ésthétique, simple et élégant, en phase avec l'activité
                             et l'identité de l'entreprise. <br>
                             J'ai également fait évolué la mise en page des produits et proposé des mises en page
@@ -612,7 +576,7 @@
                         <p class="inner-title">
                             Catalogue à destination des artisans et de leur clientèle
                         </p>
-                        <p> Travail sur une maquette d'ambiance, accompagné d'une graphiste <br>
+                        <p class='folio-inner'> Travail sur une maquette d'ambiance, accompagné d'une graphiste <br>
                             Pige et recherche de photos pour une ambiance joyeuse, familiale, en accord avec le produit.
                             <br>
                             <span>Outils utilisés :</span> Illustrator, Indesign.
@@ -636,7 +600,7 @@
                         <p class="inner-title">
                             Catalogue à destination des artisans et de leur clientèle
                         </p>
-                        <p> Travail sur une maquette d'ambiance, accompagné d'une graphiste <br>
+                        <p class='folio-inner'> Travail sur une maquette d'ambiance, accompagné d'une graphiste <br>
                             Pige et recherche de photos pour une ambiance joyeuse, familiale, en accord avec le produit.
                             <br>
                             <span>Outils utilisés :</span> Adobe Premiere Pro.
@@ -660,7 +624,7 @@
                         <p class="inner-title">
                             Catalogue à destination des artisans et de leur clientèle
                         </p>
-                        <p> Travail sur une maquette d'ambiance, accompagné d'une graphiste <br>
+                        <p class=folio-inner> Travail sur une maquette d'ambiance, accompagné d'une graphiste <br>
                             Pige et recherche de photos pour une ambiance joyeuse, familiale, en accord avec le produit.
                             <br>
                             <span>Outils utilisés :</span> Adobe Premiere Pro.
@@ -680,27 +644,30 @@
         </section>
         <div class="contact-container">
             <div class="contact-infos">
-                <p>Je suis actuellement à la recherche d'un stage pour valider mon titre professionnel, à partir des dates suivantes <br>
-                <span> Du 17 octobre 2022 au 03 février 2023 </span></p>
+                <p>Je suis actuellement à la recherche d'un stage pour valider mon titre professionnel, à partir des
+                    dates suivantes <br>
+                    <span> Du 17 octobre 2022 au 03 février 2023 </span></p>
             </div>
-             <div class="contact" id="mail">
-               <a href="mailto:donovan.dumeige@gmail.com" target="_blank"> <i class="fa-solid fa-paper-plane"></i></a>
+            <div class="contact" id="mail">
+                <a href="mailto:donovan.dumeige@gmail.com" target="_blank"> <i class="fa-solid fa-paper-plane"></i></a>
                 <p>donovan.dumeige@gmail.com</p>
-            </div> 
+            </div>
             <div class="contact" id="lkd">
-                <a href="https://www.linkedin.com/in/donovan-dumeige/" target="_blank"><i class="fa-brands fa-linkedin-in"></a></i>
+                <a href="https://www.linkedin.com/in/donovan-dumeige/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></a></i>
                 <p>/donovan.dumeige</p>
             </div>
             <div class="contact" id="irl">
                 <p><span>Nous pouvons aussi nous rencontrer</span><br>
-                Je suis disponible sur <span class="span">Lille</span> et mobile sur la région <span class="span">Hauts-de-France</span></p>
+                    Je suis disponible sur <span class="span">Lille</span> et mobile sur la région <span
+                        class="span">Hauts-de-France</span></p>
             </div>
         </div>
     </div>
     <!-- FIN CONTACT -->
 
     <!-- FOOTER -->
-    <footer> 
+    <footer>
         <p>Donovan Dumeige &copy; | 2022</p>
     </footer>
 </body>

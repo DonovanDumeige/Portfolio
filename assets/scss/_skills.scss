@@ -1,27 +1,23 @@
 @use "variables"as v;
 
 #skills{
-    height: 50px;
-    background-color: lightcoral;
+    height: 20px;
 }
 /* ******* SKILLS ******* */
 .skills-section {
     min-height: 100vh;
-    margin-bottom: 3rem;
-    background-color: rgba(173, 216, 230, 0.254);
     h2{
         text-align: center;
     }
 }
 
 .skills-library {
-    max-width: 85vw;
+    width: 85vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 310px 1fr;
     grid-template-areas: "f f f f" "b b b b" "w w w w" "o o o o";
-    grid-gap : 20px;
 }
 
 
@@ -86,12 +82,12 @@
 
 .skill-item {
     display: grid;
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 1fr 250px;
     grid-template-areas: "c i";
     align-content:center;
     grid-gap: 0 100px;
     &:nth-child(even){
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 250px 1fr;
         grid-template-areas: "i c";
         .skill-image{
             justify-content: flex-end;

@@ -4,12 +4,15 @@
 }
 
 .section-contact{
-    min-height: 50vh;
+    min-height: 40vh;
     margin-bottom: 2rem;
+    section{
+        margin: 4rem 0;
+    }
 }
 
 .contact-container{
-    max-width: 80vw;
+    width: 85vw;
     margin: 0 auto;
     height:90%;
     display: grid;
@@ -27,7 +30,7 @@
     font-family: v.$medium;
     p{
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 .contact{

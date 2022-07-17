@@ -8,7 +8,7 @@
 }
 
 .folio-container{
-    max-width: 80vw;
+    width: 85vw;
     margin: 0 auto;
     display: grid;
     /* Permet de créer automatiquement des colonnes en fonction du contenu */
@@ -68,13 +68,15 @@
         padding : 30px 0;
         }
     }
+    .inner-title, .folio-inner{
+        padding : 0 40px;
+    }
     .inner-title{
         text-align: center;
         font-family: v.$medium;
         margin-bottom: 1rem;
     }
-    p{
-        padding : 0 40px;
+    .folio-inner{
         text-align: justify;
         overflow: auto;
         line-height: 2;

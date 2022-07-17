@@ -2,7 +2,8 @@
 
 header{
     width:100%;
-    min-height:100vh;
+    height:100vh;
+    margin-bottom: 0.5rem;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("../images/bg-grey.jpg");
     background-position: top;
     background-size: cover;
@@ -12,7 +13,23 @@ header{
 /* ******* NAVBAR ******* */
 #menu{
     display:none;
+    text-align: right;
+    color : v.$mainColor;
+    font-size: 2rem;
+    position:fixed;
+    z-index: 1;
+    top:2%;
+    right: 2%;
 }
+
+/* ONLY FOR JS */
+.navbar-js{
+    width : 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* END ONLY FOR JS */
     .navbar {
         position:fixed;
         z-index: 1;
@@ -51,6 +68,8 @@ header{
         @include v.flex-align($jc:center, $ai:center);
         gap:15%;
         .intro{
+            text-align: center;
+            padding: 0 2rem;
             font-family: v.$fontPrim;
             color:white;
             font-size:4rem;
@@ -62,8 +81,10 @@ header{
         .main-skills{
             display: flex;
             @include v.flex-align($jc:center, $ai:center);
-            gap: 30%;
+            width: 100%;
+            gap: 10%;
             .skill{
+                width: 10%;
                 display: flex;
                 flex-direction: column;
                 gap:25px;
