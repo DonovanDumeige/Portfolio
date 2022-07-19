@@ -6,6 +6,7 @@
 /* ******* SKILLS ******* */
 .skills-section {
     min-height: 100vh;
+    
     h2{
         text-align: center;
     }
@@ -13,6 +14,7 @@
 
 .skills-library {
     width: 85vw;
+    margin:0 auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;

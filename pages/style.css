@@ -1,0 +1,904 @@
+*, ::before, ::after{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box
+}
+:root{
+    --MainColor:rgb(103,141,63);
+    --BgColor: #dde2e6;
+    --BgColor2: #BDEC8B;
+    --transition : all 0.2s linear;
+}
+
+/* ********* GENERAL ********* */
+@font-face {
+
+    font-family: "Catamaran";
+    src: url("./font/Catamaran/static/Catamaran-Regular.ttf");
+
+
+}
+
+@font-face{
+    font-family: "Grand-Hotel";
+    src: url(./font/Grand_Hotel/GrandHotel-Regular.ttf);
+}
+
+
+.argument p, .main-text p{
+    color:#7D93AE;
+    line-height: 1.5;
+    font-family: Catamaran;
+}
+
+body button:hover{
+    background-color: var(--BgColor2);
+    color:var(--MainColor)
+}
+/* ********** ANIMATIONS ************* */
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }  
+    50%{
+        transform: scale(1.5);
+    }   
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes toleft {
+    0% {
+        transform:translateX(-1000px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(200px);
+        opacity: 0.5;
+    }
+
+    75%{
+        transform: translateX(-50px);
+        opacity: 0.75;
+    }    
+
+    100% {
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toright {
+    0% {
+        transform:translateX(1000px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-200px);
+        opacity: 0.5;  
+    }
+    75%{
+        transform: translateX(50px);
+        opacity: 0.75;
+    }
+    100% {
+        transform:translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+        transform:scale(1.2);
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* *********** HEADER ************* */
+
+header{
+    height:80vh;
+    width:100vw;
+    background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(./image/main-bcg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* **** HEADER-LEFT **** */
+
+.header-left .fa-bars{
+    /* animation: bounce 1s linear infinite; */
+    position:absolute;
+    top:5%;
+    left:5%;
+    color:var(--MainColor);
+    font-size:2.5rem;
+    font-weight: bold;
+    z-index: 1;
+    cursor: pointer; 
+}
+.header-left input{
+    display: none;
+}
+
+.header-left nav{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    color: grey;
+    height:100vh;
+    width:35%;
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+/* ! On ne peut pas faire de transitions sur un display:none; */
+.header-left nav ul{
+    padding-left:20px;
+}
+
+.header-left nav ul li{
+    list-style-type: none;
+    line-height: 3;
+    padding:15px;
+}
+
+.header-left nav label{
+    position: absolute;
+    left: 85%;
+    top:1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.header-left nav label i{
+    color:red;
+    font-size:2.5rem;
+}
+#menu:checked ~ nav{
+    background-color: var(--BgColor);
+    transform: translateX(0);
+}
+
+/* ****HEADER-CENTER **** */
+.header-center{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+
+.header-center h3{
+    color:var(--MainColor);
+    font-family: Grand-Hotel;
+    font-size:3rem;
+    letter-spacing: 2px;
+    animation: toleft 3s linear;
+}
+
+.header-center h1{
+    font-family: Catamaran;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size:3.5rem;
+    animation: toright 3s linear;
+
+}
+
+.header-center button{
+    width: 10vw;
+    height: 8vh;
+    text-transform: uppercase;
+    font-size:1rem;
+    background-color: var(--MainColor);
+    color:white;
+    outline: 3px solid var(--MainColor);
+    outline-offset: 4px;
+    /* outline-offset gère l'espace entre la content box et l'outline */
+    cursor:pointer;
+    animation: show 3s linear;
+}
+
+/* ************ GRADIENT****************** */
+
+.gradient{
+    width:100vw;
+    height:10px;
+    background-image: linear-gradient(to right, rgb(103,141,63), #E7B84A,rgb(103,141,63));
+}
+
+/* ************ MAIN SECTION ************* */
+
+main{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ***********ARGUMENTS **************** */
+
+
+.arguments{
+    background-color: var(--BgColor);
+    height:35vh;
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding:15px;
+}
+
+.argument{
+    width:25vw;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    transition: var(--transition);
+}
+
+.argument:hover{
+    background-color: white;
+    box-shadow: 0 2px var(--MainColor);
+}
+
+.argument:hover i{
+    transform:translateY(-5px);
+}
+
+.argument h3{
+    font-family: Catamaran;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+.argument i{
+    font-size:2rem;
+    color: var(--MainColor);
+}
+.argument p{
+    text-align:center;
+}
+
+/* ********** MAIN PRODUCT ********** */
+.main-product{
+    height:65vh;
+    display: flex;
+    width:75vw;
+    margin:6% auto 0 auto;
+    gap:35px;
+}
+
+.main-product .main-image{
+    width:45%;
+    background-color: var(--MainColor);
+    height: fit-content;
+    border: 10px solid var(--MainColor);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.main-product .main-image img{
+    width:100%;
+    object-fit: cover;
+}
+
+.main-product .main-image:hover img{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    width:40%;
+}
+
+.main-text h3, .our-services .title h3{
+    font-family: Grand-Hotel;
+    font-size:2rem;
+    letter-spacing: 6px;
+    color:var(--MainColor)
+}
+
+.main-text h2, .our-services .title h2{
+    font-family: Catamaran;
+    font-size:2.5rem;
+}
+
+
+.main-text button{
+    margin-top:15px;
+    width:8vw;
+    height:5vh;
+    text-align:center;
+    background-color: var(--MainColor);
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* *********** OUR PRODUCT ************* */
+
+/* *** GENERAL *** */
+.our-product{
+    height:60vh;
+    width:100%;
+    background-color: var(--BgColor);
+    display: flex;
+    gap:50px;
+}
+
+.our-product .main-text{
+    width: 25%;
+    margin: 40px 0 0 80px;
+}
+
+.our-product .products-library{
+    width:75%;
+    height: 90%;
+    display: flex;
+    margin: 40px 0;
+    gap:35px;
+}
+
+/* *** PRODUCT *** */
+/* ** ENSEMBLE ** */
+.our-product .products-library .product{
+    width:25%;
+    display: flex;
+    flex-direction:column;
+    gap:15px;
+}
+/* Pour la taille de l'ensemble il faut jouer avec la taille de product et celle de products-library */
+.product .product-image{
+    width: 100%;
+    height:100%;
+}
+
+/* * IMAGE * */
+.product .product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:30px;
+
+}
+
+/* * TEXTE * */
+
+.product .product-info{
+    height:30%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.product .product-info h3, .product .product-info p{
+    font-family: Catamaran;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size:1rem;
+}
+.product .product-info p{
+    color: var(--MainColor);
+}
+
+
+/* ********* OUR SERVICES ********** */
+/* ***ENSEMBLE *** */
+
+.our-services{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+
+.our-services .title h3, .our-services .title h2{
+    text-align:center;
+}
+
+.our-services .title{
+    margin-top: 5vh;
+}
+
+.our-services .services{
+    display: flex;
+    width:75vw;
+    height:95vh;
+    margin:3rem auto;
+    gap:3rem;
+
+}
+.our-services .services .service{
+    width:25vw;
+    height:90%;
+    gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    transition: var(--transition);
+}
+
+.our-services .services .service:hover{
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transform:scale(1.02)
+}
+/* ** IMAGE ** */
+.service .service-image{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.service-image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-image span{
+    display: block;
+    background-color: #BDEC8B;
+    width:65px;
+    height:65px;
+    border-radius: 50%;
+    padding:14px;
+    text-align:center;
+    position:absolute;
+    top:85%;
+    left:40%;
+    border:6px solid var(--BgColor);
+}
+.service-image span i{
+    font-size: 1.7rem;
+    color:var(--MainColor);
+    position:relative;
+    left:-10%;
+    top:-10%;
+    }
+
+.service:nth-of-type(3) .service-image span i{
+    left:2%;
+}
+
+/* ** TEXTE */
+.services .service-text{
+    padding-top: 25px;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    background-color: var(--BgColor);
+}
+.service-text p{
+    font-family: Catamaran;
+    text-align: center;
+    padding: 0 5px;
+}
+.service-text button{
+    width:35%;
+    height:20vh;
+    margin-bottom:15px;
+    background-color: var(--MainColor);
+    border: 1px solid transparent;
+    color:white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+/* ***************CONTACT & FOOTER ************* */
+.contact-foot{
+    width:100vw;
+    height:100vh;
+}
+/* *************** BLOC CONTACT **************** */
+.bloc-contact{
+    height:80%;
+    width:100%;
+    display: flex;
+    margin-top:5rem;
+    
+}
+
+.contact-info{
+    margin:4rem;
+}
+/* ***CONTACT-INFO */
+.contact-info{
+    width:25%;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.contact-info p{
+    line-height:1.5;
+    font-family: Catamaran;
+    letter-spacing: 2px;
+    color: var(--MainColor);
+}
+
+.contact-info p + p{
+    font-weight: bold;
+    color: black;
+}
+.contact-info span i{
+    font-size:1.3rem;
+}
+/* ***CONTACT-FORM */
+.contact-form{
+    width:70%;
+    height:80%;
+    margin: 4rem 2rem 0 0;
+    position: relative;
+}
+
+.contact-form{
+    color: #7D93AE;
+    font-family: Catamaran;
+    font-size:1.5rem;
+    letter-spacing:2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-form fieldset{
+    background-color: var(--BgColor);
+    padding-top: 15px;
+    width:60%;
+    height:100%;
+    border: 1px solid transparent;
+    border-radius:10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    overflow-x: hidden;
+    position: absolute;
+    right: 15%;
+}
+
+
+.contact-form input, .contact-form textarea{
+    width:95%;
+    background-color: var(--BgColor);
+    font-family: Catamaran;
+    padding:15px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"]{
+    height:100px;
+}
+
+.contact-form input[type="submit"]{
+    border-radius: 0;
+    height:150px;
+    width:100%;
+    background-color: var(--MainColor);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+/* ***************** FOOTER ******************* */
+footer{
+    width:100%;
+    height:20%;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+/* *** SOCIAL ICONS */
+.social-icons{
+    display: flex;
+    gap:15px;
+}
+
+.social-icons i{
+    color:white;
+    font-size:1.5rem;
+}
+/* ***LEGAL TEXT */
+.legal-text{
+    color:white;
+    font-family: Catamaran;
+    letter-spacing:2px;
+    text-transform: uppercase;
+}
+
+.legal-text span{
+    color: var(--MainColor);
+}
+/* *******RESPONSIVE : TABLETTE ******* */
+
+@media screen and (max-width:900px){
+
+    /* *** HEADER *** */
+    .header-center button{
+        width: 15vw;
+    }
+
+    .header-left .fa-bars{
+        position: fixed;
+    }
+    .header-left nav {
+        width: 40vw;
+        max-width: 25rem;
+    }
+/* *** SECTION MAIN *** */
+    .arguments{
+        height:50vh;
+        flex-wrap: wrap;
+    }
+    .argument{
+        width:47vw;
+        height:50%;
+        padding: 5px 0;
+    }
+
+    .main-product{
+        flex-direction: column;
+        height:125vh;
+    }
+
+    .main-product .main-image{
+        width:70%;
+    }
+
+    .main-product .main-text{
+        width:55%;
+        margin-top:15px;
+    }
+    .main-text h3{
+        font-size: 2.5rem;
+    }
+    .main-text h2{
+        font-size:3.5rem;
+    }
+
+    .main-text button{
+        width:13vw;
+        height:7vh;
+    }
+/* *** SECTION PRODUITS *** */
+    .our-product{
+        flex-direction: column;
+        height:200vh;
+    }
+
+    .our-product .products-library{
+        width:95%; 
+        flex-wrap: wrap; 
+        margin:0;  
+    }
+    .our-product .products-library .product{
+        width:45vw;
+        padding: 0 3rem;
+    }    
+    
+    .our-product .products-library .product:nth-of-type(1){
+        padding-right:1.5rem;
+    }    
+    .our-product .products-library .product:nth-of-type(2){
+        padding-left:1.5rem;
+    }
+
+
+/* *** SECTION SERVICES *** */
+.our-services{
+    height:210vh;
+}
+
+.our-services .services{
+    width:90%;
+    flex-wrap: wrap;
+}
+
+.our-services .services .service{
+    width:42vw;
+    height:90%;
+}
+ 
+.service .service-text button{
+    height:6vh;
+}
+/* *** SECTION CONTACT & FOOTER */
+
+.contact-foot{
+    height:150vh;
+}
+/* ** BLOC CONTACT ** */
+.bloc-contact{
+    flex-direction: column;
+    padding-top:3rem;
+    height:85%
+}
+.contact-info{
+    height:40%;
+    margin:0;
+    padding-left: 3rem;
+}
+.contact-form{
+    width: 100%;
+    height:60%;
+    margin:0 0 3rem;
+    padding-left:3rem;
+}
+.contact-form fieldset{
+    width:70%;
+    right:25%;
+    top:5%;
+}
+
+/* ** FOOTER ** */
+footer{
+    margin:0;
+    height:15%;
+    gap:15px;
+}
+}   
+/* *******RESPONSIVE : MOBILE ******* */
+@media screen and (max-width:500px){
+    /* **** HEADER **** */
+    .header-left label i{
+        font-size:2.6rem;
+    }
+
+    .header-left nav {
+        width: 50vw;
+    }
+
+    .header-center h3{
+        font-size:2.4rem;
+        animation-duration: 2s;
+    }
+
+    .header-center h1{
+        font-size:3rem;
+        animation-duration: 2s;
+    }
+
+    .header-center button{
+        width: 25vw;
+    }
+
+    /* **** SECTION MAIN **** */
+    /* *** ARGUMENTS *** */
+    .arguments{
+        display: block;
+        width:100%;
+        height:100vh;
+    }
+
+    .argument{
+        width:95%;
+        height:25%;
+    }
+    /* *** MAIN PRODUCT *** */
+
+    .main-product .main-image, .main-product .main-text{
+        width:95%;
+    }
+
+    .main-text button{
+        width:22vw;
+        height:8vh;
+    }
+    
+    /* **** SECTION PRODUCTS **** */
+
+    .our-product{
+        align-items: center;
+        height:280vh;
+    }
+
+    .our-product .title, .our-product .main-text{
+        width:95%;
+    }
+
+    .our-product .main-text{
+        margin:0;
+        padding: 30px 50px;
+    }
+
+    .our-product .products-library{
+        align-items: center;
+        width:85%;
+    }
+
+    .our-product .products-library .product{
+        width:100%;
+        padding:0;
+    }
+
+    .our-product .products-library .product:nth-of-type(1){
+        padding-right:0;
+    }
+
+    .our-product .products-library .product:nth-of-type(2){
+        padding-left:0;
+    }
+    /* **** SECTION SERVICES **** */
+
+    .our-services{
+        height:300vh;
+    }
+
+    .our-services title{
+        padding: 30px 50px;
+    }
+    .our-services .services {
+        width:85%;
+        margin:0;
+    }
+
+    .our-services .services .service{
+        width:100%;
+    }
+    /* **** SECTION CONTACT & FOOTER **** */
+    /* *** BLOC CONTACT *** */
+
+    .bloc-contact{
+        padding-top: 0;
+        height:93%;
+    }
+    .contact-info{
+        width:95%;
+    }
+    .contact-info {
+        height: 20%;
+    }
+
+    .contact-form{
+        height:80%;
+    }
+
+    .contact-form fieldset{
+        width:90%;
+        right:5%;
+    }
+
+    /* *** FOOTER *** */
+    footer{
+        height:7%;
+    }
+
+    footer .social-icons i{
+        font-size: 1rem;
+    }
+    footer .legal-text p{
+        font-size:0.8rem;
+    }
+}

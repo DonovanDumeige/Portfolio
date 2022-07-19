@@ -296,6 +296,7 @@ header {
 .skills-library {
   width: 85vw;
   margin: 0 auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 310px 1fr;
@@ -601,7 +602,8 @@ header {
 }
 
 /* classe qui ne gère que l'aspect extérieur d'un item d'une grid */
-.realisation, .carousel-container {
+.realisation,
+.carousel-container {
   border-radius: 20px;
   box-shadow: 2px 2px 3px rgba(118, 139, 152, 0.3);
   position: relative;
@@ -609,6 +611,7 @@ header {
 
 /* style d'un conteneur d'image/video */
 .photo-folio {
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -628,6 +631,11 @@ header {
   border-top-right-radius: 20px;
 }
 .photo-folio img {
+  height: 100%;
+  object-fit: cover;
+}
+.photo-folio video {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -655,8 +663,30 @@ header {
 .overlay-text h4 {
   padding: 30px 0;
 }
+.overlay-text button {
+  margin-top: 5rem;
+  width: 10vw;
+  height: 35px;
+  background-color: #77b295;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+.overlay-text button:hover {
+  background-color: lightgreen;
+}
+.overlay-text button:hover a {
+  color: #77b295;
+}
+.overlay-text button a {
+  text-decoration: none;
+  color: white;
+  font-family: monospace;
+}
 
-.inner-title, .folio-inner {
+.inner-title,
+.folio-inner {
   padding: 0 40px;
 }
 
@@ -698,7 +728,8 @@ header {
   background-image: url(../folio/HF-cover.png);
 }
 
-.happy, .floor {
+.happy,
+.floor {
   display: inline-block;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
@@ -709,7 +740,8 @@ header {
   letter-spacing: 3px;
 }
 
-.before, .after {
+.before,
+.after {
   color: grey;
   width: 70px;
   height: 70px;
@@ -719,7 +751,8 @@ header {
   line-height: 70px;
 }
 
-.before:hover, .after:hover {
+.before:hover,
+.after:hover {
   color: brown;
 }
 
@@ -1258,6 +1291,20 @@ footer p {
     padding: 0;
   }
   /* *** FIN SECTION CONTACT *** */
+}
+@media screen and (max-width: 420px) {
+  .cta {
+    gap: 30px;
+  }
+  .cta button {
+    width: 38vw;
+  }
+  .skills-library {
+    grid-template-rows: 550px 550px 380px 470px;
+  }
+  .folio-container {
+    grid-template-columns: 340px;
+  }
 }
 
 /*# sourceMappingURL=cv.css.map */

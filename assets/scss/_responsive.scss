@@ -600,3 +600,18 @@
 
     /* *** FIN SECTION CONTACT *** */
 }
+
+@media screen and (max-width:420px) {
+    .cta{
+        gap:30px;
+        button{
+            width : 38vw;
+        }
+    }
+    .skills-library {
+        grid-template-rows: 550px 550px 380px 470px;
+    }
+    .folio-container {
+        grid-template-columns: 340px;
+    }
+}
