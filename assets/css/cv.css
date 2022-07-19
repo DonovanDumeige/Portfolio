@@ -393,7 +393,6 @@ header {
 .skill-mention {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 96%;
   grid-gap: 0 30px;
 }
 .skill-mention .skills-left {
@@ -616,6 +615,7 @@ header {
   height: 85%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  overflow: hidden;
 }
 .photo-folio:before {
   content: "";
@@ -626,6 +626,10 @@ header {
   opacity: 0.25;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+.photo-folio img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .folio-overlay {
@@ -664,7 +668,6 @@ header {
 
 .folio-inner {
   text-align: justify;
-  overflow: auto;
   line-height: 2;
 }
 .folio-inner span {
@@ -981,9 +984,6 @@ footer p {
 }
 /* ***************** MOBILE ************** */
 @media screen and (max-width: 700px) {
-  div[class$=container] {
-    width: 95vw;
-  }
   h2 {
     font-size: 1.3rem;
   }
@@ -1125,6 +1125,139 @@ footer p {
     font-size: 0.9rem;
   }
   /* *** FIN SECTION CONTACT */
+}
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 1.1rem;
+  }
+  h2 span {
+    font-size: 2.5rem;
+    top: -15px;
+  }
+  /* *** SECTION COMPETENCES *** */
+  .skills-library {
+    grid-template-rows: 350px 350px 280px 400px;
+  }
+  .skill-info h3 {
+    font-size: 1.1rem;
+  }
+  .skill-info p {
+    font-size: 0.9rem;
+  }
+  .skill-mention {
+    grid-gap: 0 10px;
+  }
+  .skill-mention p,
+.skill-mention i {
+    font-size: 0.8rem;
+  }
+  .skill-mention .names p {
+    line-height: 2.7;
+  }
+  #others h3 {
+    margin-bottom: 20px;
+  }
+  #others p,
+#others span {
+    font-size: 0.9rem;
+    line-height: 2;
+  }
+  #others span {
+    font-family: Barlow-bold;
+  }
+  #others span i {
+    font-size: 0.9rem;
+  }
+  /* *** FIN SECTION COMPETENCES */
+  /* *** SECTION PARCOURS *** */
+  .section-parcours {
+    margin-bottom: 0;
+  }
+  .exp-date p {
+    font-size: 1.3rem;
+  }
+  .exp-details h3 {
+    font-size: 1.4rem;
+  }
+  .exp-details h4 {
+    font-size: 1.1rem;
+  }
+  .exp-details p,
+.exp-details li {
+    font-size: 0.95rem;
+  }
+  .exp-details span {
+    font-size: 1rem;
+  }
+  .before {
+    left: -8%;
+  }
+  .after {
+    right: -8%;
+  }
+  /* *** FIN SECTION PARCOURS *** */
+  /* *** SECTION FOLIO *** */
+  .folio-container {
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(4, 400px);
+    grid-gap: 2rem;
+  }
+  .tags li {
+    font-size: 0.75rem;
+  }
+  .overlay-text h4 {
+    padding: 20px 0;
+  }
+  .overlay-text .inner-title {
+    font-size: 0.95rem;
+  }
+  .overlay-text .folio-inner {
+    font-size: 0.9rem;
+  }
+  /* *** FIN SECTION FOLIO */
+  /* *** SECTION CONTACT *** */
+  .contact-container {
+    width: 85vw;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 200px 200px 200px;
+    gap: 5px;
+    row-gap: 25px;
+  }
+  .contact-infos {
+    grid-row: 1/2;
+  }
+  .contact p {
+    font-size: 1.2rem;
+  }
+  .contact i {
+    font-size: 2.5rem;
+  }
+  #mail {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  #lkd {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #irl {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  #irl span {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #irl p {
+    text-align: center;
+  }
+  #irl p .span {
+    display: inline;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  /* *** FIN SECTION CONTACT *** */
 }
 
 /*# sourceMappingURL=cv.css.map */

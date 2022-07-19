@@ -201,11 +201,7 @@
 
 /* ***************** MOBILE ************** */
 
-@media screen and (max-width : 700px) {
-    div[class$="container"] {
-        width: 95vw;
-    }
-
+@media screen and (max-width:700px) {
     h2 {
         font-size: 1.3rem;
 
@@ -322,10 +318,11 @@
     /* *** FIN SECTION SKILLS  */
 
     /* *** SECTION PARCOURS */
-    .section-parcours{
-        .parcours-container{
-            width : 90vw;
-            &::after{
+    .section-parcours {
+        .parcours-container {
+            width: 90vw;
+
+            &::after {
                 display: none;
             }
         }
@@ -341,67 +338,265 @@
             display: none;
         }
     }
-    .exp-date{
+
+    .exp-date {
         flex-direction: row;
-        gap : 5px;
+        gap: 5px;
         width: 100%;
-        height : 70px;
+        height: 70px;
         border-radius: 0;
-        position : absolute;
-        top : -35px;
+        position: absolute;
+        top: -35px;
         background-color: transparent;
-        p{
-            font-size : 1.5rem;
-            color:v.$mainColor;
+
+        p {
+            font-size: 1.5rem;
+            color: v.$mainColor;
         }
     }
+
     /* *** FIN SECTION PARCOURS */
 
     /* *** SECTION FOLIO *** */
-    .folio-container{
+    .folio-container {
         grid-template-columns: 500px;
         grid-template-rows: repeat(4, 450px);
     }
+
     /* *** FIN SECTION FOLIO *** */
 
     /* *** SECTION CONTACT *** */
-    .contact-container{
+    .contact-container {
         grid-template-rows: 120px 180px;
     }
-    .contact-infos{
-        p{
-            font-size : 1.1rem;
+
+    .contact-infos {
+        p {
+            font-size: 1.1rem;
         }
-        
+
     }
 
-    .contact{
-        i{
+    .contact {
+        i {
             font-size: 2rem;
         }
-        p{
-            font-size : 0.75rem;
+
+        p {
+            font-size: 0.75rem;
         }
     }
 
-    #irl{
-        span{
-            font-size:1.1rem;
+    #irl {
+        span {
+            font-size: 1.1rem;
         }
-        p{
-            .span{
+
+        p {
+            .span {
                 font-size: 0.8rem;
                 font-family: v.$bold;
             }
         }
     }
 
-    footer{
+    footer {
         height: 60px;
-        p{
+
+        p {
             line-height: 60px;
             font-size: 0.9rem;
         }
     }
+
     /* *** FIN SECTION CONTACT */
+}
+
+@media screen and (max-width:500px) {
+    h2 {
+        font-size: 1.1rem;
+
+        span {
+            font-size: 2.5rem;
+            top: -15px;
+        }
+    }
+
+    /* *** SECTION COMPETENCES *** */
+    .skills-library {
+        grid-template-rows: 350px 350px 280px 400px;
+    }
+
+    .skill-info {
+        h3 {
+            font-size: 1.1rem;
+        }
+
+        p {
+            font-size: .9rem;
+        }
+    }
+
+    .skill-mention {
+        grid-gap: 0 10px;
+
+        p,
+        i {
+            font-size: 0.8rem;
+        }
+
+        .names {
+            p {
+                line-height: 2.7;
+            }
+        }
+    }
+
+    #others {
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        p,
+        span {
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        span {
+            font-family: v.$bold;
+
+            i {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    /* *** FIN SECTION COMPETENCES */
+
+    /* *** SECTION PARCOURS *** */
+
+    .section-parcours {
+        margin-bottom: 0;
+    }
+
+    .exp-date {
+        p {
+            font-size: 1.3rem;
+            ;
+        }
+    }
+
+    .exp-details {
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+        }
+
+        p,
+        li {
+            font-size: 0.95rem;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
+
+    .before {
+        left: -8%;
+
+    }
+
+    .after {
+        right: -8%;
+    }
+
+    /* *** FIN SECTION PARCOURS *** */
+
+    /* *** SECTION FOLIO *** */
+    .folio-container {
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(4, 400px);
+        grid-gap: 2rem;
+    }
+
+    .tags {
+        li {
+            font-size: 0.75rem;
+        }
+
+    }
+
+    .overlay-text {
+        h4 {
+            padding: 20px 0;
+        }
+
+        .inner-title {
+            font-size: 0.95rem
+        }
+
+        .folio-inner {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* *** FIN SECTION FOLIO */
+
+    /* *** SECTION CONTACT *** */
+
+    .contact-container {
+        width: 85vw;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 200px 200px 200px;
+        gap: 5px;
+        row-gap: 25px;
+    }
+
+    .contact-infos {
+        grid-row: 1/2;
+    }
+    .contact{
+        p{
+            font-size: 1.2rem;
+        }
+        i{
+            font-size: 2.5rem;
+        }
+    }
+    #mail {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #lkd {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #irl {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        span{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            .span{
+                display: inline;
+                font-size: 1.2rem;
+                padding : 0;
+            }
+        }
+    }
+
+
+    /* *** FIN SECTION CONTACT *** */
 }
