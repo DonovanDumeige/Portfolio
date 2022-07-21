@@ -71,6 +71,35 @@ header {
   background-attachment: fixed;
 }
 
+/* *******ANIMATION ******** */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing2 {
+  from {
+    width: 0;
+    visibility: visible;
+  }
+  to {
+    width: 75%;
+  }
+}
+@keyframes blinks {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
 /* ******* NAVBAR ******* */
 #menu {
   display: none;
@@ -135,14 +164,27 @@ header {
   gap: 15%;
 }
 .header-center .intro {
-  text-align: center;
   padding: 0 2rem;
   font-family: Barlow;
   color: white;
   font-size: 4rem;
+  width: 60%;
+  /*             .step1{
+                  overflow: hidden;
+                  animation: typing 3.5s steps(39,end);
+              }
+              .step2{
+                  font-size: 4.5rem;
+                  font-weight: bold;
+                  width:0;
+                  overflow: hidden;
+                  animation: typing2 3.5s 3.5s steps(22,end), blinks 0.5s infinite;
+                  animation-fill-mode: forwards;
+                  border-right: 0.25rem solid white;
+              } */
 }
 .header-center .intro span {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 .header-center .main-skills {
