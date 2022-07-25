@@ -114,9 +114,18 @@ header {
 
 /* ONLY FOR JS */
 .navbar-js {
-  width: 40%;
-  display: flex;
+  width: 30%;
+  height: 100%;
+  display: none;
   flex-direction: column;
+  background-color: lightgray;
+  position: relative;
+}
+.navbar-js ul {
+  list-style-type: none;
+}
+.navbar-js li {
+  padding: 15px;
 }
 
 /* END ONLY FOR JS */
@@ -165,10 +174,9 @@ header {
 }
 .header-center .intro {
   padding: 0 2rem;
-  font-family: Barlow;
+  font-family: Barlow-bold;
   color: white;
-  font-size: 4rem;
-  width: 60%;
+  font-size: 2.7rem;
   /*             .step1{
                   overflow: hidden;
                   animation: typing 3.5s steps(39,end);
@@ -212,6 +220,37 @@ header {
   font-weight: 600;
 }
 
+/**************** JS's animation **********************/
+#animate {
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#animate p {
+  display: inline-block;
+  width: fit-content;
+  overflow: hidden;
+}
+#animate .blink-bar {
+  display: inline-block;
+  z-index: 1;
+  width: 8px;
+  height: 30px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+/* ************** ANIMATIONS ************ */
+/* @keyframes blink{
+    from{
+        opacity: 0;
+    } to{
+        opacity:1;
+    }
+} */
 /* ******* FIN HEADER-CENTER ******* */
 /* ******* ABOUT ME ******* */
 #about {
