@@ -1,16 +1,20 @@
 "use strict"
 
+const menu = document.querySelector('.menu.fa-bars')
+const closeMenu = document.querySelector('.menu.fa-xmark')
+const navbar = document.querySelector('.navbar-js');
 //event menu burger
-function shows() {
-    create();
-    if (navbar.style.display === "block") {
-        navbar.style.display = "none";
+function show() {
+    if (navbar.style.display === "none") {
+        navbar.style.display = "block"
     } else {
-        navbar.style.display = "block";
+        navbar.style.display = "none"
     }
+    
 }
 
-
+menu.addEventListener("click", show)
+closeMenu.addEventListener("click", show)
 //typing effects with animate.
 let txt = "Je m'appelle Donovan et je suis développeur web junior"
 let count = 0
@@ -38,20 +42,8 @@ function blink() {
         iterations : Infinity
     }
     blinkBar.animate(keyframes, options)
-    //moveBar();
  }; 
 
-/*  function moveBar(){
-    const keyframes =[
-        {left:0},
-        {left:"96%"}
-    ]
-    const options = {
-        duration : 3500,
-        fill:"forwards"
-    }
-    blinkBar.animate(keyframes,options)
- } */
 
 function init() {
     Typing();

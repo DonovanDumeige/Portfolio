@@ -27,7 +27,7 @@
         height: 60vh;
     }
 
-    #menu {
+    .menu.fa-bars, .menu.fa-xmark {
         display: block;
     }
 
@@ -217,7 +217,7 @@
         height: 50vh;
     }
 
-    #menu {
+    .menu.fa-bars, .menu.fa-xmark {
         right: 3%;
         font-size: 2.2rem;
     }
