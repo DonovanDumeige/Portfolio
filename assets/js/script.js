@@ -7,14 +7,17 @@ const navbar = document.querySelector('.navbar-js');
 function show() {
     if (navbar.style.display === "none") {
         navbar.style.display = "block"
+        navbar.style.transform = "translateX(0)"
     } else {
         navbar.style.display = "none"
+        //navbar.style.transform = "translateX(-100%)"
     }
     
 }
 
 menu.addEventListener("click", show)
 closeMenu.addEventListener("click", show)
+navbar.addEventListener("mouseleave", show)
 //typing effects with animate.
 let txt = "Je m'appelle Donovan et je suis développeur web junior"
 let count = 0
