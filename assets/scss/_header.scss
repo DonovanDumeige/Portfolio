@@ -1,10 +1,10 @@
-@use "variables" as v;
+@use "variables"as v;
 
-header{
-    width:100%;
-    height:100vh;
+header {
+    width: 100%;
+    height: 100vh;
     margin-bottom: 0.5rem;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("../images/bg-grey.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/bg-grey.jpg");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,165 +12,181 @@ header{
 }
 
 /* ******* NAVBAR ******* */
-.menu.fa-bars, .menu.fa-xmark {
-    display:none;
+.menu.fa-bars,
+.menu.fa-xmark {
+    display: none;
     text-align: right;
-    color : v.$mainColor;
+    color: v.$mainColor;
     font-size: 2.5rem;
-    position:fixed;
+    position: fixed;
     z-index: 1;
-    top:2%;
-    right: 6%;
+    top: 4%;
+    right: 4%;
+}
+
+.menu.fa-xmark {
+    right: 2%
 }
 
 /* ONLY FOR JS */
-.navbar-js{
-    width : 50%;
-    height:100%;
+.navbar-js {
+    width: 50%;
+    height: 100%;
     display: none;
     flex-direction: column;
     background-color: lightgray;
-    position:fixed;
-    top:0;
-    right:0;
-    z-index:2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
     box-shadow: -12px -2px 10px rgba(118, 139, 152, 0.3);
     transform: translateX(-100%);
     transition: transform 0.5s 1s linear;
-    .fa-xmark{
+
+    .fa-xmark {
         margin-bottom: 2rem;
     }
-    ul{
+
+    ul {
         list-style-type: none;
     }
-    li{
-        padding:20px;
-        &:active{
+
+    li {
+        padding: 20px;
+
+        &:active {
             background-color: v.$mainColor;
-            a{
-                color:white;
+
+            a {
+                color: white;
             }
         }
     }
-    a{
-        font-size:1.2rem;
+
+    a {
+        font-size: 1.2rem;
         text-decoration: none;
-        color:v.$secondColor;
-        i{
+        color: v.$secondColor;
+
+        i {
             font-size: 3rem;
         }
     }
 }
 
 /* END ONLY FOR JS */
-    .navbar {
-        position:fixed;
-        z-index: 1;
-        top:0;
-        background-color: rgba(0,0,0,.4);
-        width : 100%;
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
 
-        ul{
-            @include v.size (100vw, 50px);
-            display: flex;
-            @include v.flex-align($jc:flex-end, $ai:center);
-            gap: 30px;
-            padding-right: 80px;
-            li{
-                list-style-type: none;
-                &:first-child i{
-                    font-size: 1.3rem;
-                }
-                &:hover a{
-                    border-bottom: 2px solid white;
-                }
-                a{
-                    color:white;
-                    font-size:1.1rem;
-                    text-transform: uppercase;
-                    font-family: v.$fontPrim;
-                    text-decoration: none;   
-                }
-            }
-        }
-    }
-/* ******* HEADER-CENTER ******* */
-    .header-center{
-        @include v.size(100%, calc(100% - 50px));
+    ul {
+        @include v.size (100vw, 50px);
         display: flex;
-        flex-direction: column;
-        @include v.flex-align($jc:center, $ai:center);
-        gap:15%;
-        .intro{
-            padding: 0 2rem;
-            font-family: v.$bold;
-            color:white;
-            font-size:2.7rem;
-            
-/*             .step1{
-                overflow: hidden;
-                animation: typing 3.5s steps(39,end);
-            }
-            .step2{
-                font-size: 4.5rem;
-                font-weight: bold;
-                width:0;
-                overflow: hidden;
-                animation: typing2 3.5s 3.5s steps(22,end), blinks 0.5s infinite;
-                animation-fill-mode: forwards;
-                border-right: 0.25rem solid white;
-            } */
+        @include v.flex-align($jc:flex-end, $ai:center);
+        gap: 30px;
+        padding-right: 80px;
 
-            span{
-                font-size: 4rem;
-                font-weight: bold;
+        li {
+            list-style-type: none;
+
+            &:first-child i {
+                font-size: 1.3rem;
+            }
+
+            &:hover a {
+                border-bottom: 2px solid white;
+            }
+
+            a {
+                color: white;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                font-family: v.$fontPrim;
+                text-decoration: none;
             }
         }
-        .main-skills{
-            display: flex;
-            @include v.flex-align($jc:center, $ai:center);
-            width: 100%;
-            gap: 10%;
-            .skill{
-                width: 10%;
-                display: flex;
-                flex-direction: column;
-                gap:25px;
-                @include v.flex-align($jc:center, $ai:center);
-                i{
-                    font-size: 5rem;
-                    color: white;
-                }
-                p{
-                    font-family: v.$fontPrim;
-                    color:white;
-                    font-weight: 600;
-                }
-                }
-            }
     }
+}
+
+/* ******* HEADER-CENTER ******* */
+.header-center {
+    @include v.size(100%, calc(100% - 50px));
+    display: flex;
+    flex-direction: column;
+    @include v.flex-align($jc:center, $ai:center);
+    gap: 15%;
+
+    .intro {
+        font-family: v.$bold;
+        color: white;
+        text-align: center;
+        p{
+            padding : 5px;
+            text-align: center;
+        }
+        .sub {
+            font-size: 1.3rem;
+            font-family: v.$fontPrim;
+            text-transform: uppercase;
+
+        }
+    }
+
+    .main-skills {
+        display: flex;
+        @include v.flex-align($jc:center, $ai:center);
+        width: 100%;
+        gap: 10%;
+
+        .skill {
+            width: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            @include v.flex-align($jc:center, $ai:center);
+
+            i {
+                font-size: 5rem;
+                color: white;
+            }
+
+            p {
+                font-family: v.$fontPrim;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
 /**************** JS's animation **********************/
 #animate {
     overflow: hidden;
-    width:90%;
-    display:flex;
-    align-items:center;
+    width: 90%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap : 10px;
-    p{
+    gap: 10px;
+    font-size: 2.7rem;
+
+    p {
         display: inline-block;
         width: fit-content;
         overflow: hidden;
     }
-    .blink-bar{
+
+    .blink-bar {
         display: inline-block;
         z-index: 1;
         width: 8px;
-        height:30px;
+        height: 30px;
         background-color: white;
-        margin-top:10px;
+        margin-top: 10px;
         //animation: blink 0.5s infinite ease-in-out;
-}
+    }
 }
 
 /* ************** ANIMATIONS ************ */
@@ -182,4 +198,3 @@ header{
     }
 } */
 /* ******* FIN HEADER-CENTER ******* */
-

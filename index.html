@@ -11,7 +11,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./assets/js/carrusel.js" defer></script>
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/script.js" defer type="module"></script>
 </head>
 
 <body>
@@ -30,11 +30,11 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
+
         <nav class="navbar-js">
             <i class="fa-solid fa-xmark menu mark"></i>
             <ul>
-                    <i class="fa-solid fa-xmark-large menu"></i>
+                <i class="fa-solid fa-xmark-large menu"></i>
                 <li>
                     <a href="#start">Accueil</a>
                 </li>
@@ -48,10 +48,12 @@
 
         <!-- header-center -->
         <div class="header-center">
-            <div class="intro" id="animate">
-                <p> </p>
-                <div class="blink-bar"></div>
-
+            <div class="intro">
+                <div id="animate">
+                    <p> </p>
+                    <div class="blink-bar"></div>
+                </div>
+                <p class="sub">Developper web junior | Donovan Dumeige</p>
 
             </div>
             <div class="main-skills">
@@ -120,11 +122,11 @@
         <!-- Call to action -->
         <div class="cta">
             <div class="contactme">
-                <button><a href="#">Me contacter</a></button>
+                <button><a href="#contact">Me contacter</a></button>
             </div>
             <div class="download">
                 <!-- action JS à prévoir : télécharger le CV au clic du bouton -->
-                <button><a href="#download">Télécharger mon CV</a></button>
+                <button><a href="./assets/src/CV Donovan DUMEIGE 2022-print.pdf" target="_blank">Télécharger mon CV</a></button>
             </div>
         </div>
     </div>
@@ -555,11 +557,14 @@
             <!-- Realisation 1 -->
             <article class="realisation" id="tea-station">
                 <div class="photo-folio">
-                    <img src="./assets/folio/teastation.png" alt="">
                 </div>
                 <div class="folio-overlay">
                     <div class="overlay-text">
-                        <h4>Tea Station</h4>
+                        <h4>
+                            Tea Station
+                            <span class="more">voir plus</span>
+                            <span class="symbol"> &#128897;</span>
+                        </h4>
                         <ul class="tags">
                             <li>HTML</li>
                             <li>CSS</li>
@@ -583,7 +588,10 @@
                 </div>
                 <div class="folio-overlay">
                     <div class="overlay-text">
-                        <h4>Catalogue général CBR-MAGI-STLI</h4>
+                        <h4>Catalogue général CBR-MAGI-STLI
+                            <span class="more">voir plus</span>
+                            <span class="symbol"> &#128897;</span>
+                        </h4>
                         <ul class="tags">
                             <li>Design</li>
                             <li>Suite adobe</li>
@@ -614,6 +622,8 @@
                         <h4>Catalogue produits
                             <span class="happy"> Happy</span>
                             <span class="floor">Floor</span>
+                            <span class="more">voir plus</span>
+                            <span class="symbol"> &#128897;</span>
                         </h4>
                         <ul class="tags">
                             <li>Design</li>
@@ -632,17 +642,20 @@
             </article>
 
 
-            <!-- Realisation 3 -->
+            <!-- Realisation 4 -->
             <article class="realisation">
                 <div class="photo-folio" id="videos">
                     <video src="./assets/folio/Goldcollection.mp4" controls></video>
                 </div>
                 <div class="folio-overlay">
                     <div class="overlay-text">
-                        <h4>Vidéos produits</h4>
+                        <h4>Vidéos produits &nbsp;
+                            <span class="more">voir plus</span>
+                            <span class="symbol"> &#128897;</span>
+                        </h4>
                         <ul class="tags">
                             <li>Audiovisuel</li>
-                            <li>Montage vidéo</li>
+                            <li>Montage</li>
                             <li>Premiere Pro</li>
                         </ul>
                         <p class="inner-title">
