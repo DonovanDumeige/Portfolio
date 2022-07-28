@@ -17,9 +17,8 @@
     height:90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 1fr;
-    column-gap:2rem;
-    row-gap: 1rem;
+    grid-template-rows: repeat(2,auto);
+    gap : 2rem;
 }
 
 .contact-infos{
@@ -93,7 +92,7 @@
     }
     p{
         .span{
-            font-family: v.$medium;
+            font-family: v.$bold;
             color : rgb(65, 64, 64);
             font-size : 1.25rem;
         }

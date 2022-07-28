@@ -95,9 +95,20 @@ function init() {
 window.addEventListener("load", init)
 
 // Second carousel
-import c from "./carousel-v3.js"
-const test = document.querySelector('#tea-station')
-const carousel = new c(["./assets/folio/CBR-cover.png", "./assets/folio/CBR-inner1.png"]);
-test.append(carousel.container);
+import c from "./carousel-2.js";
+const test = document.querySelector('#cbr')
+const carousel = new c(["./assets/folio/CBR-cover.png", "./assets/folio/CBR-inner1.png", "./assets/folio/CBR-inner2.png"]);
+test.prepend(carousel.container);
 carousel.init();
 
+const happyFloor = document.querySelector("#happy-floor");
+const carousel2 = new c(["./assets/folio/HF-cover.png", "./assets/folio/HF-inner.png",]);
+happyFloor.prepend(carousel2.container);
+carousel2.init();
+
+//Carousel pour la vidéo
+import v from "./carousel-video.js";
+const clips = document.querySelector("#clips");
+const carousel3 = new v(["./assets/folio/Goldcollection.mp4", "./assets/folio/3Fleches.mp4"]);
+clips.prepend(carousel3.container);
+carousel3.init();

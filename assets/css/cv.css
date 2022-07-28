@@ -79,7 +79,7 @@ header {
   color: #D73512;
   font-size: 2.5rem;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 4%;
   right: 4%;
 }
@@ -98,7 +98,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   box-shadow: -12px -2px 10px rgba(118, 139, 152, 0.3);
   transform: translateX(-100%);
   transition: transform 0.5s 1s linear;
@@ -130,7 +130,7 @@ header {
 /* END ONLY FOR JS */
 .navbar {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -371,7 +371,8 @@ header {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 310px 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 2rem 0;
   grid-template-areas: "f f f f" "b b b b" "w w w w" "o o o o";
 }
 
@@ -668,9 +669,9 @@ header {
   margin: 0 auto;
   display: grid;
   /* Permet de créer automatiquement des colonnes en fonction du contenu */
-  grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
-  grid-template-rows: repeat(2, 500px);
-  grid-gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px 500px;
+  gap: 2rem;
 }
 
 /* classe qui ne gère que l'aspect extérieur d'un item d'une grid */
@@ -678,6 +679,7 @@ header {
   border-radius: 20px;
   box-shadow: 2px 2px 3px rgba(118, 139, 152, 0.3);
   position: relative;
+  overflow: hidden;
 }
 
 /* style d'un conteneur d'image/video */
@@ -724,6 +726,7 @@ header {
   bottom: 0;
   left: 0;
   transition: height 0.6s ease-out;
+  z-index: 1;
 }
 .folio-overlay:hover {
   height: 100%;
@@ -801,14 +804,6 @@ header {
   font-size: 0.85rem;
 }
 
-#cbr {
-  background-image: url(../folio/CBR-cover.png);
-}
-
-#happy-floor {
-  background-image: url(../folio/HF-cover.png);
-}
-
 .happy,
 .floor {
   display: inline-block;
@@ -823,16 +818,28 @@ header {
 
 /* ***** For carousel **** */
 /* Next & previous buttons */
-.photo-folio img {
+#clips .photo-folio {
+  height: 95%;
+}
+#clips .photo-folio .items video {
+  position: relative;
+  z-index: 1;
+}
+
+#clips .prev, #clips .next {
+  z-index: 2;
+}
+
+.items img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .photo-folio .items {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: none;
+  margin: 0 auto;
 }
 
 /* Next & previous buttons */
@@ -885,12 +892,12 @@ header {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
 }
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.95;
   }
   to {
     opacity: 1;
@@ -914,9 +921,8 @@ header {
   height: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 1fr;
-  column-gap: 2rem;
-  row-gap: 1rem;
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
 }
 
 .contact-infos {
@@ -989,7 +995,7 @@ header {
   font-family: Barlow-bold;
 }
 #irl p .span {
-  font-family: Barlow-medium;
+  font-family: Barlow-bold;
   color: rgb(65, 64, 64);
   font-size: 1.25rem;
 }
@@ -1107,17 +1113,29 @@ footer p {
   /* *** SECTION CONTACT */
   .contact-container {
     width: 90vw;
-    grid-template-rows: 130px 180px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+  }
+  .contact-infos {
+    grid-row: 1/2;
+    grid-column: 1/4;
   }
   .contact-infos p {
     font-size: 1.2rem;
     line-height: 2;
   }
-  .contact i {
-    font-size: 2.5rem;
+  #mail {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
-  .contact p {
-    font-size: 1rem;
+  #lkd {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #irl {
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
   #irl span {
     display: block;
@@ -1125,8 +1143,13 @@ footer p {
     padding: 0 15px;
   }
   #irl p .span {
-    font-family: Barlow-medium;
     color: rgb(54, 52, 52);
+    font-size: 1rem;
+  }
+  .contact i {
+    font-size: 2.5rem;
+  }
+  .contact p {
     font-size: 1rem;
   }
   footer {
@@ -1202,9 +1225,6 @@ header .menu.fa-xmark {
   }
   /* *** FIN SECTION ABOUT *** */
   /* *** SECTION SKILLS *** */
-  .skills-library {
-    grid-template-rows: 350px 350px 280px 485px;
-  }
   .skill-item {
     grid-template-columns: 1fr;
     grid-template-areas: "c";
@@ -1254,23 +1274,41 @@ header .menu.fa-xmark {
   /* *** FIN SECTION FOLIO *** */
   /* *** SECTION CONTACT *** */
   .contact-container {
-    grid-template-rows: 120px 180px;
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+  }
+  .contact i {
+    font-size: 3rem;
+  }
+  .contact p {
+    font-size: 1.2rem;
+  }
+  .contact-infos {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
   .contact-infos p {
     font-size: 1.1rem;
   }
-  .contact i {
-    font-size: 2rem;
+  #mail {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
-  .contact p {
-    font-size: 0.75rem;
+  #lkd {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #irl {
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
   #irl span {
-    font-size: 1.1rem;
+    font-size: 2.5rem;
   }
   #irl p .span {
-    font-size: 0.8rem;
-    font-family: Barlow-bold;
+    font-size: 1.2rem;
   }
   footer {
     height: 60px;
@@ -1305,9 +1343,6 @@ header .menu.fa-xmark {
     margin-top: 5px;
   }
   /* *** SECTION COMPETENCES *** */
-  .skills-library {
-    grid-template-rows: 350px 350px 280px 400px;
-  }
   .skill-info h3 {
     font-size: 1.1rem;
   }
@@ -1389,13 +1424,6 @@ header .menu.fa-xmark {
   .contact-container {
     width: 85vw;
     margin: 0 auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 160px 200px 200px 200px;
-    gap: 5px;
-    row-gap: 25px;
-  }
-  .contact-infos {
-    grid-row: 1/2;
   }
   .contact p {
     font-size: 1.2rem;
@@ -1403,26 +1431,14 @@ header .menu.fa-xmark {
   .contact i {
     font-size: 2.5rem;
   }
-  #mail {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  #lkd {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  #irl {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
-  #irl span {
+  .contact span {
     font-size: 1.5rem;
     text-align: center;
   }
-  #irl p {
+  .contact p {
     text-align: center;
   }
-  #irl p .span {
+  .contact p .span {
     display: inline;
     font-size: 1.2rem;
     padding: 0;
@@ -1459,9 +1475,6 @@ header .menu.fa-xmark {
   }
   /* *** FIN SECTION ABOUT *** */
   /* *** SECTION SKILLS */
-  .skills-library {
-    grid-template-rows: 480px 550px 310px 550px;
-  }
   .skill-mention {
     grid-template-columns: 1fr;
     grid-template-rows: 135px 1fr;

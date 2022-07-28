@@ -3,17 +3,20 @@ export default class Carousel {
     btns = [];
     items = [];
     dots = [];
-    constructor(imgs){
+    constructor(videos){
         // Crée mon carousel.
-        const container = document.querySelector(".photo-folio");
+        console.log(this);
+        const container = document.createElement("div");
+        container.classList.add('photo-folio')
         const dots = document.createElement("div");
         dots.classList.add("dots");
-        imgs.forEach((img, i) => {
+        videos.forEach((video, i) => {
             const div = document.createElement("div");
             div.classList.add("items", "fade");
-            const image = document.createElement("img");
-            image.src = img;
-            div.append(image);
+            const vid = document.createElement("video");
+            vid.src = video;
+            vid.setAttribute("controls",true)
+            div.append(vid);
             const dot = document.createElement("span");
             dot.classList.add("dot");
             dot.dataset.id = i;

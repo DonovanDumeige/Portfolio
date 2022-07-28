@@ -153,15 +153,48 @@
     /* *** SECTION CONTACT */
     .contact-container {
         width: 90vw;
-        grid-template-rows: 130px 180px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
     }
 
+
     .contact-infos {
+        grid-row: 1/2;
+        grid-column: 1/4;
         p {
             font-size: 1.2rem;
             line-height: 2;
         }
     }
+
+    #mail {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #lkd {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #irl {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        span {
+            display: block;
+            font-size: 1.2rem;
+            padding: 0 15px
+        }
+
+        p {
+            .span {
+                color: rgb(54, 52, 52);
+                font-size: 1rem;
+            }
+        }
+    }
+
 
     .contact {
         i {
@@ -174,21 +207,7 @@
         }
     }
 
-    #irl {
-        span {
-            display: block;
-            font-size: 1.2rem;
-            padding: 0 15px
-        }
 
-        p {
-            .span {
-                font-family: v.$medium;
-                color: rgb(54, 52, 52);
-                font-size: 1rem;
-            }
-        }
-    }
 
     footer {
         height: 75px;
@@ -300,9 +319,6 @@
     /* *** FIN SECTION ABOUT *** */
 
     /* *** SECTION SKILLS *** */
-    .skills-library {
-        grid-template-rows: 350px 350px 280px 485px;
-    }
 
     .skill-item {
         grid-template-columns: 1fr;
@@ -369,39 +385,59 @@
     /* *** FIN SECTION FOLIO *** */
 
     /* *** SECTION CONTACT *** */
+
     .contact-container {
-        grid-template-rows: 120px 180px;
-    }
-
-    .contact-infos {
-        p {
-            font-size: 1.1rem;
-        }
-
+        width: 90vw;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(4, auto);
+        justify-content: center;
     }
 
     .contact {
         i {
-            font-size: 2rem;
+            font-size: 3rem;
         }
 
         p {
-            font-size: 0.75rem;
+            font-size: 1.2rem;
         }
     }
 
-    #irl {
-        span {
+    .contact-infos {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        p {
             font-size: 1.1rem;
+        }
+    }
+
+    #mail {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #lkd {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #irl {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        span {
+            font-size: 2.5rem;
         }
 
         p {
             .span {
-                font-size: 0.8rem;
-                font-family: v.$bold;
+                font-size: 1.2rem;
             }
         }
     }
+
+
+
+
 
     footer {
         height: 60px;
@@ -453,9 +489,6 @@
     }
 
     /* *** SECTION COMPETENCES *** */
-    .skills-library {
-        grid-template-rows: 350px 350px 280px 400px;
-    }
 
     .skill-info {
         h3 {
@@ -583,14 +616,7 @@
     .contact-container {
         width: 85vw;
         margin: 0 auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: 160px 200px 200px 200px;
-        gap: 5px;
-        row-gap: 25px;
-    }
 
-    .contact-infos {
-        grid-row: 1/2;
     }
 
     .contact {
@@ -601,22 +627,7 @@
         i {
             font-size: 2.5rem;
         }
-    }
-
-    #mail {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-
-    #lkd {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-
-    #irl {
-        grid-column: 1/2;
-        grid-row: 4/5;
-
+    
         span {
             font-size: 1.5rem;
             text-align: center;
@@ -682,9 +693,6 @@
     /* *** FIN SECTION ABOUT *** */
 
     /* *** SECTION SKILLS */
-    .skills-library {
-        grid-template-rows: 480px 550px 310px 550px;
-    }
 
     .skill-mention {
         grid-template-columns: 1fr;
