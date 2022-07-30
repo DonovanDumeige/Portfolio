@@ -34,7 +34,6 @@ overlay.forEach(o => {
 });
 
 function remplaceHover() {
-    console.log(this);
     const overSymbol = this.querySelector('h4 .symbol')
     const overSpan = this.querySelector('h4 .more')
     //e.stopPropagation(); // permet de ne déclencher que l'event de la cible et pas celui des parents.
@@ -109,6 +108,6 @@ carousel2.init();
 //Carousel pour la vidéo
 import v from "./carousel-video.js";
 const clips = document.querySelector("#clips");
-const carousel3 = new v(["./assets/folio/Goldcollection.mp4", "./assets/folio/3Fleches.mp4"]);
+const carousel3 = new v(["https://drive.google.com/file/d/15udM6zjNLCE_EgVHdSLA0YwLRnYc-_18/view?usp=sharing", "./assets/folio/3Fleches.mp4"]);
 clips.prepend(carousel3.container);
 carousel3.init();

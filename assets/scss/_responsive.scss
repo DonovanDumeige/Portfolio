@@ -697,14 +697,20 @@
     .skill-mention {
         grid-template-columns: 1fr;
         grid-template-rows: 135px 1fr;
+        .skills-right, .skills-left{
+            justify-content: flex-start;
+        }
         .skills-right {
             grid-column: 1/2;
+            gap : 74px;
+        }
+        .skills-left{
+            gap : 60px;
         }
         p,
         i {
             font-size: 1rem;
         }
-
         .names {
             p {
                 line-height: 2;

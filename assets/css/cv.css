@@ -1479,8 +1479,15 @@ header .menu.fa-xmark {
     grid-template-columns: 1fr;
     grid-template-rows: 135px 1fr;
   }
+  .skill-mention .skills-right, .skill-mention .skills-left {
+    justify-content: flex-start;
+  }
   .skill-mention .skills-right {
     grid-column: 1/2;
+    gap: 74px;
+  }
+  .skill-mention .skills-left {
+    gap: 60px;
   }
   .skill-mention p,
 .skill-mention i {
