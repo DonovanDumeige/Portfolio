@@ -144,9 +144,6 @@
                 display: inline-block;
             }
         }
-        button{
-            width : 15.7vw;
-        }
     }
     /* *** FIN SECTION FOLIO *** */
 
@@ -380,7 +377,11 @@
     .folio-container {
         grid-template-columns: 500px;
         grid-template-rows: repeat(4, 450px);
+        button{
+            margin-top: 2rem;
+        }
     }
+
 
     /* *** FIN SECTION FOLIO *** */
 
@@ -523,7 +524,7 @@
 
         p,
         span {
-            font-size: 0.9rem;
+            font-size:1.1rem;
             line-height: 2;
         }
 
@@ -710,7 +711,28 @@
             }
         }
     }
+    #dev{
+        h3{
+            font-size: 1.2rem;
+        }
+        .skill-mention{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 120px;
 
+            .frontend{
+                grid-row: 1/2;
+            }
+            .backend{
+                grid-row: 2/3;
+            }
+    
+            .others{
+                grid-row: 3/4;
+            }
+        }
+        }
+
+       
     #webDesign{
         .skill-mention{
             grid-template-rows: 65px 35px;
@@ -736,14 +758,5 @@
     }
 }
 
-.overlay-text{
-    button{
-        margin-top:1rem;
-        width:35vw;
-        a{
-            font-size:0.8rem;
-        }
-    }
-}
 /* *** FIN SECTION FOLIO *** */
 }

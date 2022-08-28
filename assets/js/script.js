@@ -1,25 +1,25 @@
 "use strict"
 
-const menu = document.querySelector('.menu.fa-bars')
-const closeMenu = document.querySelector('.menu.fa-xmark')
+const menu = document.querySelector('.menu.fa-bars');
+const closeMenu = document.querySelector('.menu.fa-xmark');
 const navbar = document.querySelector('.navbar-js');
+
 //event menu burger
 function show() {
     if (navbar.style.display === "none") {
-        navbar.style.display = "block"
-        navbar.style.transform = "translateX(0)"
+        navbar.style.display = "block";
+        menu.classList.remove('fa-bars');
+        menu.classList.add('fa-xmark');
+        navbar.style.transform = "translateX(0)";
     } else {
-        navbar.style.display = "none"
-        //navbar.style.transform = "translateX(-100%)"
+        navbar.style.display = "none";
+        menu.classList.remove('fa-xmark');
+        menu.classList.add('fa-bars');
+        navbar.style.transform = "translateX(-100%)";
     }
 }
 
-function close() {
-    navbar.style.display = "none"
-}
-//window.addEventListener("click", close) 
 menu.addEventListener("click", show)
-closeMenu.addEventListener("click", show)
 
 // cliquer sur body fait disparaitre la navbar
 // J'ai travaillé sur une fonction à part pour éviter l'ouverture de la nav au clic du body.
@@ -105,9 +105,4 @@ const carousel2 = new c(["./assets/folio/HF-cover.png", "./assets/folio/HF-inner
 happyFloor.prepend(carousel2.container);
 carousel2.init();
 
-//Carousel pour la vidéo
-import v from "./carousel-video.js";
-const clips = document.querySelector("#clips");
-const carousel3 = new v(["https://drive.google.com/file/d/15udM6zjNLCE_EgVHdSLA0YwLRnYc-_18/view?usp=sharing", "./assets/folio/3Fleches.mp4"]);
-clips.prepend(carousel3.container);
-carousel3.init();
+

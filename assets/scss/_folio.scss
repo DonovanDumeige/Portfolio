@@ -95,9 +95,10 @@
         }
     }
 
+    /* Style général pour les boutons.*/
     button {
-        margin-top: 5rem;
-        width: 10vw;
+        margin-top: 4rem;
+        width: 150px;
         height: 40px;
         background-color: v.$vert;
         color: white;
@@ -121,6 +122,21 @@
             font-size: 1rem;
         }
     }
+
+    /* For videos produits */
+
+.btnLine{
+    width : 85%;
+    margin : 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    column-gap: 10px;
+    
+    button{
+        width : auto;
+        height : 40px;
+    }
+}
 }
 
 .inner-title,
