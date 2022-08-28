@@ -71,10 +71,8 @@
     /* ** SIDE ** */
     .side {
         .side-photo {
-            img {
-                width: 80%;
-                transform: translateX(25px);
-            }
+            width : 200px;
+            height : 200px;
         }
 
         .side-infos {
@@ -278,13 +276,9 @@
 
     .side {
         flex-direction: row;
-
-        .side-photo {
-            width: 50%;
-
-            img {
-                width: 70%
-            }
+        .side-photo{
+            height : 170px;
+            width : 170px;
         }
 
         .side-infos {
@@ -488,7 +482,17 @@
             }
         }
     }
+    /* *** SECTION ABOUT ***  */
 
+        .side {
+            width : 90%;
+        flex-direction: row;
+        .side-photo{
+            height : 150px;
+            width : 150px;
+        }
+
+    }
     /* *** SECTION COMPETENCES *** */
 
     .skill-info {
