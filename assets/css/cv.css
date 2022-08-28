@@ -26,6 +26,7 @@ body {
   background-color: rgba(27, 47, 51, 0.2);
   font-family: Barlow;
   font-size: 1.05rem;
+  overflow-x: hidden;
 }
 
 /* body *{
@@ -1392,25 +1393,30 @@ header .menu.fa-xmark {
   .skill-info h3 {
     font-size: 1.1rem;
   }
-  .skill-info p {
-    font-size: 0.9rem;
+  .skill-info .description {
+    font-size: 1rem;
   }
   .skill-mention {
     grid-gap: 0 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 135px 1fr;
+  }
+  .skill-mention .skills-right {
+    grid-column: 1/2;
   }
   .skill-mention p,
 .skill-mention i {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .skill-mention .names p {
-    line-height: 2.7;
+    line-height: 2;
   }
   #others h3 {
     margin-bottom: 20px;
   }
   #others p,
 #others span {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 2;
   }
   #others span {
@@ -1418,6 +1424,25 @@ header .menu.fa-xmark {
   }
   #others span i {
     font-size: 0.9rem;
+  }
+  #dev h3 {
+    font-size: 1.1rem;
+  }
+  #dev .skill-mention {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 120px;
+  }
+  #dev .skill-mention .frontend {
+    grid-row: 1/2;
+  }
+  #dev .skill-mention .backend {
+    grid-row: 2/3;
+  }
+  #dev .skill-mention .others {
+    grid-row: 3/4;
+  }
+  #webDesign .skill-mention {
+    grid-template-rows: 65px 35px;
   }
   /* *** FIN SECTION COMPETENCES */
   /* *** SECTION PARCOURS *** */
@@ -1520,41 +1545,6 @@ header .menu.fa-xmark {
     font-size: 0.9rem;
   }
   /* *** FIN SECTION ABOUT *** */
-  /* *** SECTION SKILLS */
-  .skill-mention {
-    grid-template-columns: 1fr;
-    grid-template-rows: 135px 1fr;
-  }
-  .skill-mention .skills-right {
-    grid-column: 1/2;
-  }
-  .skill-mention p,
-.skill-mention i {
-    font-size: 1rem;
-  }
-  .skill-mention .names p {
-    line-height: 2;
-  }
-  #dev h3 {
-    font-size: 1.2rem;
-  }
-  #dev .skill-mention {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 120px;
-  }
-  #dev .skill-mention .frontend {
-    grid-row: 1/2;
-  }
-  #dev .skill-mention .backend {
-    grid-row: 2/3;
-  }
-  #dev .skill-mention .others {
-    grid-row: 3/4;
-  }
-  #webDesign .skill-mention {
-    grid-template-rows: 65px 35px;
-  }
-  /* *** FIN SECTION SKILLS  */
   /* *** SECTION FOLIO *** */
   .folio-container {
     grid-template-columns: 340px;

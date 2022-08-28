@@ -495,27 +495,31 @@
     }
     /* *** SECTION COMPETENCES *** */
 
+
     .skill-info {
         h3 {
             font-size: 1.1rem;
         }
 
-        p {
-            font-size: .9rem;
+        .description{
+            font-size: 1rem;
         }
     }
 
     .skill-mention {
         grid-gap: 0 10px;
-
+        grid-template-columns: 1fr;
+        grid-template-rows: 135px 1fr;
+        .skills-right {
+            grid-column: 1/2;
+        }
         p,
         i {
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
-
         .names {
             p {
-                line-height: 2.7;
+                line-height: 2;
             }
         }
     }
@@ -528,7 +532,7 @@
 
         p,
         span {
-            font-size:1.1rem;
+            font-size:1rem;
             line-height: 2;
         }
 
@@ -541,6 +545,35 @@
         }
     }
 
+        #dev{
+            h3{
+                font-size: 1.1rem;
+            }
+            .skill-mention{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 120px;
+    
+                .frontend{
+                    grid-row: 1/2;
+                }
+                .backend{
+                    grid-row: 2/3;
+                }
+        
+                .others{
+                    grid-row: 3/4;
+                }
+            }
+            }
+    
+           
+        #webDesign{
+            .skill-mention{
+                grid-template-rows: 65px 35px;
+            }
+        }
+    
+    
     /* *** FIN SECTION COMPETENCES */
 
     /* *** SECTION PARCOURS *** */
@@ -697,54 +730,7 @@
 
     /* *** FIN SECTION ABOUT *** */
 
-    /* *** SECTION SKILLS */
 
-    .skill-mention {
-        grid-template-columns: 1fr;
-        grid-template-rows: 135px 1fr;
-        .skills-right {
-            grid-column: 1/2;
-        }
-        p,
-        i {
-            font-size: 1rem;
-        }
-        .names {
-            p {
-                line-height: 2;
-            }
-        }
-    }
-    #dev{
-        h3{
-            font-size: 1.2rem;
-        }
-        .skill-mention{
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 120px;
-
-            .frontend{
-                grid-row: 1/2;
-            }
-            .backend{
-                grid-row: 2/3;
-            }
-    
-            .others{
-                grid-row: 3/4;
-            }
-        }
-        }
-
-       
-    #webDesign{
-        .skill-mention{
-            grid-template-rows: 65px 35px;
-        }
-    }
-
-
-/* *** FIN SECTION SKILLS  */
 
 /* *** SECTION FOLIO *** */
 .folio-container {
