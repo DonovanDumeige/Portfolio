@@ -1428,6 +1428,9 @@ header .menu.fa-xmark {
   #dev h3 {
     font-size: 1.1rem;
   }
+  #dev .dev-title {
+    font-size: 1rem;
+  }
   #dev .skill-mention {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 120px;
