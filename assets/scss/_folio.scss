@@ -74,11 +74,6 @@
     left: 0;
     transition: height 0.6s ease-out;
     z-index : 1;
-
-    &:hover {
-        height: 100%;
-        border-radius: 20px;
-    }
 }
 
 .overlay-text {
@@ -91,7 +86,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 300;
             font-size: 0.9rem;
-            display: none;
         }
     }
 

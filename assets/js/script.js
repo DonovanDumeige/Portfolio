@@ -30,20 +30,24 @@ const overlay = document.querySelectorAll('.folio-overlay');
 
 // se déclenche sur chaque folio.overlay
 overlay.forEach(o => {
-    o.addEventListener("click", remplaceHover)
+    o.addEventListener("click", slideUp)
 });
 
-function remplaceHover() {
+function slideUp() {
+    console.log('this ?', this)
     const overSymbol = this.querySelector('h4 .symbol')
     const overSpan = this.querySelector('h4 .more')
-    //e.stopPropagation(); // permet de ne déclencher que l'event de la cible et pas celui des parents.
     if (this.style.height === "15%") {
         this.style.height = "100%"
-        overSymbol.innerHTML = "&#128899;"
+        this.style.borderRadius="20px"
+        overSymbol.innerHTML = "&#9662;"
         overSpan.textContent = "voir moins"
     } else {
         this.style.height = "15%";
-        overSymbol.innerHTML = "&#128897;"
+        this.style.borderRadius="0"
+        this.style.borderBottomlLeftRadius="20px"
+        this.style.borderBottomRightRadius="20px"
+        overSymbol.innerHTML = "&#9652;"
         overSpan.textContent = "voir plus"
     }
 }
